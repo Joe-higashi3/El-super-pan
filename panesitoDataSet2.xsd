@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="panesitoDataSet2" targetNamespace="http://tempuri.org/panesitoDataSet2.xsd" xmlns:mstns="http://tempuri.org/panesitoDataSet2.xsd" xmlns="http://tempuri.org/panesitoDataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="panesitoConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="panesitoConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsFormsApp2.Properties.Settings.GlobalReference.Default.panesitoConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CLIENTETableAdapter" GeneratorDataComponentClassName="CLIENTETableAdapter" Name="CLIENTE" UserDataComponentName="CLIENTETableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="panesitoConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT CLIENTE.cl_id_cliente, CLIENTE.cl_nombre, CLIENTE.cl_apellido_pat, CLIENTE.cl_apellido_mat, CLIENTE.cl_telefono, CLIENTE.cl_calle, CLIENTE.cl_num_interior, CLIENTE.cl_num_exterior, CLIENTE.cl_colonia, CLIENTE.cl_id_municipio, 
+                  MU.mu_descripcion, CLIENTE.cl_status
+FROM     CLIENTE INNER JOIN
+                  MUNICIPIO AS MU ON CLIENTE.cl_id_municipio = MU.mu_id_municipio</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="cl_id_cliente" DataSetColumn="cl_id_cliente" />
+              <Mapping SourceColumn="cl_nombre" DataSetColumn="cl_nombre" />
+              <Mapping SourceColumn="cl_apellido_pat" DataSetColumn="cl_apellido_pat" />
+              <Mapping SourceColumn="cl_apellido_mat" DataSetColumn="cl_apellido_mat" />
+              <Mapping SourceColumn="cl_telefono" DataSetColumn="cl_telefono" />
+              <Mapping SourceColumn="cl_calle" DataSetColumn="cl_calle" />
+              <Mapping SourceColumn="cl_num_interior" DataSetColumn="cl_num_interior" />
+              <Mapping SourceColumn="cl_num_exterior" DataSetColumn="cl_num_exterior" />
+              <Mapping SourceColumn="cl_colonia" DataSetColumn="cl_colonia" />
+              <Mapping SourceColumn="cl_id_municipio" DataSetColumn="cl_id_municipio" />
+              <Mapping SourceColumn="cl_status" DataSetColumn="cl_status" />
+              <Mapping SourceColumn="mu_descripcion" DataSetColumn="mu_descripcion" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="panesitoDataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="panesitoDataSet2" msprop:Generator_UserDSName="panesitoDataSet2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CLIENTE" msprop:Generator_TableClassName="CLIENTEDataTable" msprop:Generator_TableVarName="tableCLIENTE" msprop:Generator_RowChangedName="CLIENTERowChanged" msprop:Generator_TablePropName="CLIENTE" msprop:Generator_RowDeletingName="CLIENTERowDeleting" msprop:Generator_RowChangingName="CLIENTERowChanging" msprop:Generator_RowEvHandlerName="CLIENTERowChangeEventHandler" msprop:Generator_RowDeletedName="CLIENTERowDeleted" msprop:Generator_RowClassName="CLIENTERow" msprop:Generator_UserTableName="CLIENTE" msprop:Generator_RowEvArgName="CLIENTERowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cl_id_cliente" msprop:Generator_ColumnVarNameInTable="columncl_id_cliente" msprop:Generator_ColumnPropNameInRow="cl_id_cliente" msprop:Generator_ColumnPropNameInTable="cl_id_clienteColumn" msprop:Generator_UserColumnName="cl_id_cliente" type="xs:int" />
+              <xs:element name="cl_nombre" msprop:Generator_ColumnVarNameInTable="columncl_nombre" msprop:Generator_ColumnPropNameInRow="cl_nombre" msprop:Generator_ColumnPropNameInTable="cl_nombreColumn" msprop:Generator_UserColumnName="cl_nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cl_apellido_pat" msprop:Generator_ColumnVarNameInTable="columncl_apellido_pat" msprop:Generator_ColumnPropNameInRow="cl_apellido_pat" msprop:Generator_ColumnPropNameInTable="cl_apellido_patColumn" msprop:Generator_UserColumnName="cl_apellido_pat">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cl_apellido_mat" msprop:Generator_ColumnVarNameInTable="columncl_apellido_mat" msprop:Generator_ColumnPropNameInRow="cl_apellido_mat" msprop:Generator_ColumnPropNameInTable="cl_apellido_matColumn" msprop:Generator_UserColumnName="cl_apellido_mat" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cl_telefono" msprop:Generator_ColumnVarNameInTable="columncl_telefono" msprop:Generator_ColumnPropNameInRow="cl_telefono" msprop:Generator_ColumnPropNameInTable="cl_telefonoColumn" msprop:Generator_UserColumnName="cl_telefono">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cl_calle" msprop:Generator_ColumnVarNameInTable="columncl_calle" msprop:Generator_ColumnPropNameInRow="cl_calle" msprop:Generator_ColumnPropNameInTable="cl_calleColumn" msprop:Generator_UserColumnName="cl_calle">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cl_num_interior" msprop:Generator_ColumnVarNameInTable="columncl_num_interior" msprop:Generator_ColumnPropNameInRow="cl_num_interior" msprop:Generator_ColumnPropNameInTable="cl_num_interiorColumn" msprop:Generator_UserColumnName="cl_num_interior">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cl_num_exterior" msprop:Generator_ColumnVarNameInTable="columncl_num_exterior" msprop:Generator_ColumnPropNameInRow="cl_num_exterior" msprop:Generator_ColumnPropNameInTable="cl_num_exteriorColumn" msprop:Generator_UserColumnName="cl_num_exterior" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cl_colonia" msprop:Generator_ColumnVarNameInTable="columncl_colonia" msprop:Generator_ColumnPropNameInRow="cl_colonia" msprop:Generator_ColumnPropNameInTable="cl_coloniaColumn" msprop:Generator_UserColumnName="cl_colonia">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cl_id_municipio" msprop:Generator_ColumnVarNameInTable="columncl_id_municipio" msprop:Generator_ColumnPropNameInRow="cl_id_municipio" msprop:Generator_ColumnPropNameInTable="cl_id_municipioColumn" msprop:Generator_UserColumnName="cl_id_municipio" type="xs:int" />
+              <xs:element name="cl_status" msprop:Generator_ColumnVarNameInTable="columncl_status" msprop:Generator_ColumnPropNameInRow="cl_status" msprop:Generator_ColumnPropNameInTable="cl_statusColumn" msprop:Generator_UserColumnName="cl_status">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="mu_descripcion" msprop:Generator_ColumnVarNameInTable="columnmu_descripcion" msprop:Generator_ColumnPropNameInRow="mu_descripcion" msprop:Generator_ColumnPropNameInTable="mu_descripcionColumn" msprop:Generator_UserColumnName="mu_descripcion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:CLIENTE" />
+      <xs:field xpath="mstns:cl_id_cliente" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

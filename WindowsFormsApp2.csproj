@@ -1,0 +1,833 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FD072F8D-65BE-4F0A-BF72-17378F65FBAE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp2</RootNamespace>
+    <AssemblyName>WindowsFormsApp2</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Buscarproducto.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Buscarproducto.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="busquedas\frmbusquedaclientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="busquedas\frmbusquedaclientes.Designer.cs">
+      <DependentUpon>frmbusquedaclientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="busquedas\frmbusquedapedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="busquedas\frmbusquedapedidos.Designer.cs">
+      <DependentUpon>frmbusquedapedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="clases\clsalmacen.cs" />
+    <Compile Include="clases\clscategoria.cs" />
+    <Compile Include="clases\clscliente.cs" />
+    <Compile Include="clases\clsempleado.cs" />
+    <Compile Include="clases\clsinsumo.cs" />
+    <Compile Include="clases\clspedido.cs" />
+    <Compile Include="clases\clsproducto.cs" />
+    <Compile Include="clases\clsproveedor.cs" />
+    <Compile Include="clases\clsreceta.cs" />
+    <Compile Include="clases\clsrol.cs" />
+    <Compile Include="clases\clstipomov.cs" />
+    <Compile Include="clases\clsunidad.cs" />
+    <Compile Include="clases\clsventa.cs" />
+    <Compile Include="clases\conexion.cs" />
+    <Compile Include="clases\clsvalidar.cs" />
+    <Compile Include="dsCliente.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCliente.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsInsumosp.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsInsumosp.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DsMunicipio.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsMunicipio.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsunidad.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsunidad.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dtsempleado.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsempleado.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dtsempleado1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsempleado1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dtsPanesito.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsPanesito.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmalmacen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmalmacen.Designer.cs">
+      <DependentUpon>frmalmacen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="busquedas\frmbuscarproducto1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="busquedas\frmbuscarproducto1.Designer.cs">
+      <DependentUpon>frmbuscarproducto1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmcategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmcategoria.Designer.cs">
+      <DependentUpon>frmcategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmclientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmclientes.Designer.cs">
+      <DependentUpon>frmclientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmempleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmempleados.Designer.cs">
+      <DependentUpon>frmempleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frminsumos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frminsumos.Designer.cs">
+      <DependentUpon>frminsumos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmmenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmmenu.Designer.cs">
+      <DependentUpon>frmmenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmpedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmpedidos.Designer.cs">
+      <DependentUpon>frmpedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmproductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmproductos.Designer.cs">
+      <DependentUpon>frmproductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmproveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmproveedor.Designer.cs">
+      <DependentUpon>frmproveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmreceta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmreceta.Designer.cs">
+      <DependentUpon>frmreceta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmrol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmrol.Designer.cs">
+      <DependentUpon>frmrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmtipomov.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmtipomov.Designer.cs">
+      <DependentUpon>frmtipomov.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmunidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmunidad.Designer.cs">
+      <DependentUpon>frmunidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmventas.Designer.cs">
+      <DependentUpon>frmventas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gruposDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>gruposDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="gruposDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>gruposDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="panesitoAlmacen.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>panesitoAlmacen.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="panesitoCategoria.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>panesitoCategoria.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="panesitoCategoria1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>panesitoCategoria1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="panesitoDataSet.cs">
+      <DependentUpon>panesitoDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="panesitoDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>panesitoDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="panesitoDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>panesitoDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="panesitoDataSet2.cs">
+      <DependentUpon>panesitoDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="panesitoDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>panesitoDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="panesitoDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>panesitoDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="panesitoDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>panesitoDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="panesitoDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>panesitoDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="panesitoDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>panesitoDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="panesitoDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>panesitoDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="panesitoDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>panesitoDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="panesitoEmpleado.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>panesitoEmpleado.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="panesitoInsumo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>panesitoInsumo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="panesitoMunicipio.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>panesitoMunicipio.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="panesitoProducto.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>panesitoProducto.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PanesitoProveedores.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PanesitoProveedores.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="panesitoRol.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>panesitoRol.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="panesitorol1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>panesitorol1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="panesitorol11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>panesitorol11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="panesitoTipomov.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>panesitoTipomov.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="panesitoUnidad.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>panesitoUnidad.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="panesitoUnidad1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>panesitoUnidad1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="panesitoUnidad2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>panesitoUnidad2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pedidos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Pedidos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reportes\frmrepopedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportes\frmrepopedidos.Designer.cs">
+      <DependentUpon>frmrepopedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reportes\frmrepoventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportes\frmrepoventas.Designer.cs">
+      <DependentUpon>frmrepoventas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilerias\Validacion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utilerias\Validacion.Designer.cs">
+      <DependentUpon>Validacion.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="busquedas\frmbusquedaclientes.resx">
+      <DependentUpon>frmbusquedaclientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="busquedas\frmbusquedapedidos.resx">
+      <DependentUpon>frmbusquedapedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmalmacen.resx">
+      <DependentUpon>frmalmacen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="busquedas\frmbuscarproducto1.resx">
+      <DependentUpon>frmbuscarproducto1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmcategoria.resx">
+      <DependentUpon>frmcategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmclientes.resx">
+      <DependentUpon>frmclientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmempleados.resx">
+      <DependentUpon>frmempleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frminsumos.resx">
+      <DependentUpon>frminsumos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmmenu.resx">
+      <DependentUpon>frmmenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmpedidos.resx">
+      <DependentUpon>frmpedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmproductos.resx">
+      <DependentUpon>frmproductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmproveedor.resx">
+      <DependentUpon>frmproveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmreceta.resx">
+      <DependentUpon>frmreceta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmrol.resx">
+      <DependentUpon>frmrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmtipomov.resx">
+      <DependentUpon>frmtipomov.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmunidad.resx">
+      <DependentUpon>frmunidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmventas.resx">
+      <DependentUpon>frmventas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="reportes\frmrepopedidos.resx">
+      <DependentUpon>frmrepopedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\frmrepoventas.resx">
+      <DependentUpon>frmrepoventas.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Buscarproducto.xsc">
+      <DependentUpon>Buscarproducto.xsd</DependentUpon>
+    </None>
+    <None Include="Buscarproducto.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Buscarproducto.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Buscarproducto.xss">
+      <DependentUpon>Buscarproducto.xsd</DependentUpon>
+    </None>
+    <None Include="dsCliente.xsc">
+      <DependentUpon>dsCliente.xsd</DependentUpon>
+    </None>
+    <None Include="dsCliente.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCliente.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsCliente.xss">
+      <DependentUpon>dsCliente.xsd</DependentUpon>
+    </None>
+    <None Include="dsInsumosp.xsc">
+      <DependentUpon>dsInsumosp.xsd</DependentUpon>
+    </None>
+    <None Include="dsInsumosp.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsInsumosp.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsInsumosp.xss">
+      <DependentUpon>dsInsumosp.xsd</DependentUpon>
+    </None>
+    <None Include="DsMunicipio.xsc">
+      <DependentUpon>DsMunicipio.xsd</DependentUpon>
+    </None>
+    <None Include="DsMunicipio.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsMunicipio.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DsMunicipio.xss">
+      <DependentUpon>DsMunicipio.xsd</DependentUpon>
+    </None>
+    <None Include="dsunidad.xsc">
+      <DependentUpon>dsunidad.xsd</DependentUpon>
+    </None>
+    <None Include="dsunidad.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsunidad.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsunidad.xss">
+      <DependentUpon>dsunidad.xsd</DependentUpon>
+    </None>
+    <None Include="dtsempleado.xsc">
+      <DependentUpon>dtsempleado.xsd</DependentUpon>
+    </None>
+    <None Include="dtsempleado.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsempleado.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dtsempleado.xss">
+      <DependentUpon>dtsempleado.xsd</DependentUpon>
+    </None>
+    <None Include="dtsempleado1.xsc">
+      <DependentUpon>dtsempleado1.xsd</DependentUpon>
+    </None>
+    <None Include="dtsempleado1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsempleado1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dtsempleado1.xss">
+      <DependentUpon>dtsempleado1.xsd</DependentUpon>
+    </None>
+    <None Include="dtsPanesito.xsc">
+      <DependentUpon>dtsPanesito.xsd</DependentUpon>
+    </None>
+    <None Include="dtsPanesito.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsPanesito.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dtsPanesito.xss">
+      <DependentUpon>dtsPanesito.xsd</DependentUpon>
+    </None>
+    <None Include="gruposDataSet.xsc">
+      <DependentUpon>gruposDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="gruposDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>gruposDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="gruposDataSet.xss">
+      <DependentUpon>gruposDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="gruposDataSet2.xsc">
+      <DependentUpon>gruposDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="gruposDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>gruposDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="gruposDataSet2.xss">
+      <DependentUpon>gruposDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoAlmacen.xsc">
+      <DependentUpon>panesitoAlmacen.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoAlmacen.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>panesitoAlmacen.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="panesitoAlmacen.xss">
+      <DependentUpon>panesitoAlmacen.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoCategoria.xsc">
+      <DependentUpon>panesitoCategoria.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoCategoria.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>panesitoCategoria.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="panesitoCategoria.xss">
+      <DependentUpon>panesitoCategoria.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoCategoria1.xsc">
+      <DependentUpon>panesitoCategoria1.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoCategoria1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>panesitoCategoria1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="panesitoCategoria1.xss">
+      <DependentUpon>panesitoCategoria1.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoDataSet.xsc">
+      <DependentUpon>panesitoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>panesitoDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="panesitoDataSet.xss">
+      <DependentUpon>panesitoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoDataSet1.xsc">
+      <DependentUpon>panesitoDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>panesitoDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="panesitoDataSet1.xss">
+      <DependentUpon>panesitoDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoDataSet2.xsc">
+      <DependentUpon>panesitoDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>panesitoDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="panesitoDataSet2.xss">
+      <DependentUpon>panesitoDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoDataSet3.xsc">
+      <DependentUpon>panesitoDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>panesitoDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="panesitoDataSet3.xss">
+      <DependentUpon>panesitoDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoDataSet4.xsc">
+      <DependentUpon>panesitoDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>panesitoDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="panesitoDataSet4.xss">
+      <DependentUpon>panesitoDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoDataSet5.xsc">
+      <DependentUpon>panesitoDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>panesitoDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="panesitoDataSet5.xss">
+      <DependentUpon>panesitoDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoDataSet6.xsc">
+      <DependentUpon>panesitoDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>panesitoDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="panesitoDataSet6.xss">
+      <DependentUpon>panesitoDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoDataSet7.xsc">
+      <DependentUpon>panesitoDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>panesitoDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="panesitoDataSet7.xss">
+      <DependentUpon>panesitoDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoDataSet8.xsc">
+      <DependentUpon>panesitoDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>panesitoDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="panesitoDataSet8.xss">
+      <DependentUpon>panesitoDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoEmpleado.xsc">
+      <DependentUpon>panesitoEmpleado.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoEmpleado.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>panesitoEmpleado.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="panesitoEmpleado.xss">
+      <DependentUpon>panesitoEmpleado.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoInsumo.xsc">
+      <DependentUpon>panesitoInsumo.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoInsumo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>panesitoInsumo.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="panesitoInsumo.xss">
+      <DependentUpon>panesitoInsumo.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoMunicipio.xsc">
+      <DependentUpon>panesitoMunicipio.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoMunicipio.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>panesitoMunicipio.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="panesitoMunicipio.xss">
+      <DependentUpon>panesitoMunicipio.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoProducto.xsc">
+      <DependentUpon>panesitoProducto.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoProducto.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>panesitoProducto.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="panesitoProducto.xss">
+      <DependentUpon>panesitoProducto.xsd</DependentUpon>
+    </None>
+    <None Include="PanesitoProveedores.xsc">
+      <DependentUpon>PanesitoProveedores.xsd</DependentUpon>
+    </None>
+    <None Include="PanesitoProveedores.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PanesitoProveedores.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PanesitoProveedores.xss">
+      <DependentUpon>PanesitoProveedores.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoRol.xsc">
+      <DependentUpon>panesitoRol.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoRol.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>panesitoRol.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="panesitoRol.xss">
+      <DependentUpon>panesitoRol.xsd</DependentUpon>
+    </None>
+    <None Include="panesitorol1.xsc">
+      <DependentUpon>panesitorol1.xsd</DependentUpon>
+    </None>
+    <None Include="panesitorol1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>panesitorol1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="panesitorol1.xss">
+      <DependentUpon>panesitorol1.xsd</DependentUpon>
+    </None>
+    <None Include="panesitorol11.xsc">
+      <DependentUpon>panesitorol11.xsd</DependentUpon>
+    </None>
+    <None Include="panesitorol11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>panesitorol11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="panesitorol11.xss">
+      <DependentUpon>panesitorol11.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoTipomov.xsc">
+      <DependentUpon>panesitoTipomov.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoTipomov.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>panesitoTipomov.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="panesitoTipomov.xss">
+      <DependentUpon>panesitoTipomov.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoUnidad.xsc">
+      <DependentUpon>panesitoUnidad.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoUnidad.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>panesitoUnidad.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="panesitoUnidad.xss">
+      <DependentUpon>panesitoUnidad.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoUnidad1.xsc">
+      <DependentUpon>panesitoUnidad1.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoUnidad1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>panesitoUnidad1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="panesitoUnidad1.xss">
+      <DependentUpon>panesitoUnidad1.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoUnidad2.xsc">
+      <DependentUpon>panesitoUnidad2.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoUnidad2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>panesitoUnidad2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="panesitoUnidad2.xss">
+      <DependentUpon>panesitoUnidad2.xsd</DependentUpon>
+    </None>
+    <None Include="Pedidos.xsc">
+      <DependentUpon>Pedidos.xsd</DependentUpon>
+    </None>
+    <None Include="Pedidos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Pedidos.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Pedidos.xss">
+      <DependentUpon>Pedidos.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
