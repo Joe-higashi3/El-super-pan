@@ -34,6 +34,9 @@ namespace WindowsFormsApp2.forms
             consecutivo();
             cbxstatus.SelectedIndex = 0;
         }
+
+        
+
         private void Guardar_proveedor()
         {
             clsproveedor proveedor = new clsproveedor();
@@ -224,9 +227,17 @@ namespace WindowsFormsApp2.forms
             txtcalle.Focus();
         }
 
+
+        
+
         private void txtnumext_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtRFC_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
         }
     }
 }

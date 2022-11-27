@@ -224,7 +224,7 @@ namespace WindowsFormsApp2.forms
         private void txtexterior_KeyPress(object sender, KeyPressEventArgs e)
         {
             ValidarNumeros(sender, e);
-            txtinterior.Focus();
+            txtexterior.Focus();
         }
 
         private void txtcalle_KeyPress(object sender, KeyPressEventArgs e)

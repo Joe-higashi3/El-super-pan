@@ -134,5 +134,10 @@ namespace WindowsFormsApp2.forms
             ValidarNumeros(sender, e);
             txttipo.Focus();
         }
+
+        private void txttipo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -44,9 +44,9 @@
             this.rOLBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panesitorol1 = new WindowsFormsApp2.panesitorol1();
             this.rOLTableAdapter1 = new WindowsFormsApp2.panesitorol1TableAdapters.ROLTableAdapter();
-            this.txttipo = new WindowsFormsApp2.Utilerias.Validacion();
             this.errorValidar = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorValidacion = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txttipo = new WindowsFormsApp2.Utilerias.Validacion();
             ((System.ComponentModel.ISupportInitialize)(this.panesitorol)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rOLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvrol)).BeginInit();
@@ -173,21 +173,6 @@
             // 
             this.rOLTableAdapter1.ClearBeforeFill = true;
             // 
-            // txttipo
-            // 
-            this.txttipo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txttipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttipo.Location = new System.Drawing.Point(329, 102);
-            this.txttipo.Margin = new System.Windows.Forms.Padding(4);
-            this.txttipo.Name = "txttipo";
-            this.txttipo.Size = new System.Drawing.Size(204, 34);
-            this.txttipo.SoloLetras = false;
-            this.txttipo.SoloNumeros = false;
-            this.txttipo.TabIndex = 55;
-            this.txttipo.Validar = true;
-            this.txttipo.VRFC = false;
-            this.txttipo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttipo_KeyPress);
-            // 
             // errorValidar
             // 
             this.errorValidar.ContainerControl = this;
@@ -196,6 +181,18 @@
             // errorValidacion
             // 
             this.errorValidacion.ContainerControl = this;
+            // 
+            // txttipo
+            // 
+            this.txttipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttipo.Location = new System.Drawing.Point(316, 104);
+            this.txttipo.Name = "txttipo";
+            this.txttipo.Size = new System.Drawing.Size(208, 30);
+            this.txttipo.SoloLetras = true;
+            this.txttipo.SoloNumeros = false;
+            this.txttipo.TabIndex = 55;
+            this.txttipo.Validar = true;
+            this.txttipo.VRFC = false;
             // 
             // frmrol
             // 
@@ -241,8 +238,8 @@
         private panesitorol1 panesitorol1;
         private System.Windows.Forms.BindingSource rOLBindingSource1;
         private panesitorol1TableAdapters.ROLTableAdapter rOLTableAdapter1;
-        private Utilerias.Validacion txttipo;
         private System.Windows.Forms.ErrorProvider errorValidar;
         private System.Windows.Forms.ErrorProvider errorValidacion;
+        private Utilerias.Validacion txttipo;
     }
 }

@@ -13,8 +13,9 @@
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT CLIENTE.cl_id_cliente, CLIENTE.cl_nombre, CLIENTE.cl_apellido_pat, CLIENTE.cl_apellido_mat, CLIENTE.cl_telefono, CLIENTE.cl_calle, CLIENTE.cl_num_interior, CLIENTE.cl_num_exterior, CLIENTE.cl_colonia, CLIENTE.cl_id_municipio, 
-                  MU.mu_descripcion, CLIENTE.cl_status
+                  CLIENTE.cl_status, CLIENTE.cl_id_tipocl, TC.tc_descripcion, MU.mu_descripcion
 FROM     CLIENTE INNER JOIN
+                  TIPO_CLIENTE AS TC ON CLIENTE.cl_id_tipocl = TC.tc_id INNER JOIN
                   MUNICIPIO AS MU ON CLIENTE.cl_id_municipio = MU.mu_id_municipio</CommandText>
                     <Parameters />
                   </DbCommand>
@@ -33,6 +34,8 @@ FROM     CLIENTE INNER JOIN
               <Mapping SourceColumn="cl_colonia" DataSetColumn="cl_colonia" />
               <Mapping SourceColumn="cl_id_municipio" DataSetColumn="cl_id_municipio" />
               <Mapping SourceColumn="cl_status" DataSetColumn="cl_status" />
+              <Mapping SourceColumn="cl_id_tipocl" DataSetColumn="cl_id_tipocl" />
+              <Mapping SourceColumn="tc_descripcion" DataSetColumn="tc_descripcion" />
               <Mapping SourceColumn="mu_descripcion" DataSetColumn="mu_descripcion" />
             </Mappings>
             <Sources />
@@ -45,7 +48,7 @@ FROM     CLIENTE INNER JOIN
   <xs:element name="panesitoDataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="panesitoDataSet2" msprop:Generator_UserDSName="panesitoDataSet2">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="CLIENTE" msprop:Generator_TableClassName="CLIENTEDataTable" msprop:Generator_TableVarName="tableCLIENTE" msprop:Generator_RowChangedName="CLIENTERowChanged" msprop:Generator_TablePropName="CLIENTE" msprop:Generator_RowDeletingName="CLIENTERowDeleting" msprop:Generator_RowChangingName="CLIENTERowChanging" msprop:Generator_RowEvHandlerName="CLIENTERowChangeEventHandler" msprop:Generator_RowDeletedName="CLIENTERowDeleted" msprop:Generator_RowClassName="CLIENTERow" msprop:Generator_UserTableName="CLIENTE" msprop:Generator_RowEvArgName="CLIENTERowChangeEvent">
+        <xs:element name="CLIENTE" msprop:Generator_TableClassName="CLIENTEDataTable" msprop:Generator_TableVarName="tableCLIENTE" msprop:Generator_TablePropName="CLIENTE" msprop:Generator_RowDeletingName="CLIENTERowDeleting" msprop:Generator_RowChangingName="CLIENTERowChanging" msprop:Generator_RowEvHandlerName="CLIENTERowChangeEventHandler" msprop:Generator_RowDeletedName="CLIENTERowDeleted" msprop:Generator_UserTableName="CLIENTE" msprop:Generator_RowChangedName="CLIENTERowChanged" msprop:Generator_RowEvArgName="CLIENTERowChangeEvent" msprop:Generator_RowClassName="CLIENTERow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="cl_id_cliente" msprop:Generator_ColumnVarNameInTable="columncl_id_cliente" msprop:Generator_ColumnPropNameInRow="cl_id_cliente" msprop:Generator_ColumnPropNameInTable="cl_id_clienteColumn" msprop:Generator_UserColumnName="cl_id_cliente" type="xs:int" />
@@ -110,6 +113,14 @@ FROM     CLIENTE INNER JOIN
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cl_id_tipocl" msprop:Generator_ColumnVarNameInTable="columncl_id_tipocl" msprop:Generator_ColumnPropNameInRow="cl_id_tipocl" msprop:Generator_ColumnPropNameInTable="cl_id_tipoclColumn" msprop:Generator_UserColumnName="cl_id_tipocl" type="xs:int" />
+              <xs:element name="tc_descripcion" msprop:Generator_ColumnVarNameInTable="columntc_descripcion" msprop:Generator_ColumnPropNameInRow="tc_descripcion" msprop:Generator_ColumnPropNameInTable="tc_descripcionColumn" msprop:Generator_UserColumnName="tc_descripcion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>

@@ -29,45 +29,45 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmventas));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvVentas = new System.Windows.Forms.DataGridView();
             this.label9 = new System.Windows.Forms.Label();
-            this.cbxcliente = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.btnbuscarproducto = new System.Windows.Forms.Button();
             this.btnquitarproducto = new System.Windows.Forms.Button();
             this.btnagregar = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpfecha = new System.Windows.Forms.DateTimePicker();
             this.button4 = new System.Windows.Forms.Button();
             this.btnbuscarpedido = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtcantidad = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtcambio = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnbuscar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtpagacon = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txttotal = new System.Windows.Forms.TextBox();
+            this.txtcancelar = new System.Windows.Forms.TextBox();
             this.btncancelar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.txtbuscarcliente = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvVentas
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(14, 101);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(5);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(515, 573);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVentas.Location = new System.Drawing.Point(14, 101);
+            this.dgvVentas.Margin = new System.Windows.Forms.Padding(5);
+            this.dgvVentas.Name = "dgvVentas";
+            this.dgvVentas.RowTemplate.Height = 24;
+            this.dgvVentas.Size = new System.Drawing.Size(515, 573);
+            this.dgvVentas.TabIndex = 0;
             // 
             // label9
             // 
@@ -78,14 +78,6 @@
             this.label9.TabIndex = 59;
             this.label9.Text = "Cliente:";
             // 
-            // cbxcliente
-            // 
-            this.cbxcliente.FormattingEnabled = true;
-            this.cbxcliente.Location = new System.Drawing.Point(116, 48);
-            this.cbxcliente.Name = "cbxcliente";
-            this.cbxcliente.Size = new System.Drawing.Size(319, 33);
-            this.cbxcliente.TabIndex = 60;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -95,12 +87,12 @@
             this.label1.TabIndex = 62;
             this.label1.Text = "Codigo:";
             // 
-            // textBox2
+            // txtCodigo
             // 
-            this.textBox2.Location = new System.Drawing.Point(637, 101);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(114, 30);
-            this.textBox2.TabIndex = 61;
+            this.txtCodigo.Location = new System.Drawing.Point(637, 101);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(114, 30);
+            this.txtCodigo.TabIndex = 61;
             // 
             // btnbuscarproducto
             // 
@@ -130,13 +122,13 @@
             this.btnagregar.Text = "Agregar";
             this.btnagregar.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // dtpfecha
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(861, 12);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(156, 30);
-            this.dateTimePicker1.TabIndex = 66;
+            this.dtpfecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpfecha.Location = new System.Drawing.Point(861, 12);
+            this.dtpfecha.Name = "dtpfecha";
+            this.dtpfecha.Size = new System.Drawing.Size(156, 30);
+            this.dtpfecha.TabIndex = 66;
             // 
             // button4
             // 
@@ -166,12 +158,12 @@
             this.label2.TabIndex = 70;
             this.label2.Text = "Cantidad:";
             // 
-            // textBox1
+            // txtcantidad
             // 
-            this.textBox1.Location = new System.Drawing.Point(869, 101);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(85, 30);
-            this.textBox1.TabIndex = 69;
+            this.txtcantidad.Location = new System.Drawing.Point(869, 101);
+            this.txtcantidad.Name = "txtcantidad";
+            this.txtcantidad.Size = new System.Drawing.Size(85, 30);
+            this.txtcantidad.TabIndex = 69;
             // 
             // button6
             // 
@@ -191,12 +183,12 @@
             this.label3.TabIndex = 73;
             this.label3.Text = "Cambio:";
             // 
-            // textBox3
+            // txtcambio
             // 
-            this.textBox3.Location = new System.Drawing.Point(653, 626);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(114, 30);
-            this.textBox3.TabIndex = 72;
+            this.txtcambio.Location = new System.Drawing.Point(653, 626);
+            this.txtcambio.Name = "txtcambio";
+            this.txtcambio.Size = new System.Drawing.Size(114, 30);
+            this.txtcambio.TabIndex = 72;
             // 
             // label4
             // 
@@ -207,12 +199,12 @@
             this.label4.TabIndex = 75;
             this.label4.Text = "Descripcion:";
             // 
-            // textBox4
+            // txtDescripcion
             // 
-            this.textBox4.Location = new System.Drawing.Point(681, 137);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(273, 30);
-            this.textBox4.TabIndex = 74;
+            this.txtDescripcion.Location = new System.Drawing.Point(681, 137);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(273, 30);
+            this.txtDescripcion.TabIndex = 74;
             // 
             // pictureBox1
             // 
@@ -245,12 +237,12 @@
             this.label5.TabIndex = 79;
             this.label5.Text = "Paga con:";
             // 
-            // textBox5
+            // txtpagacon
             // 
-            this.textBox5.Location = new System.Drawing.Point(653, 590);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(114, 30);
-            this.textBox5.TabIndex = 78;
+            this.txtpagacon.Location = new System.Drawing.Point(653, 590);
+            this.txtpagacon.Name = "txtpagacon";
+            this.txtpagacon.Size = new System.Drawing.Size(114, 30);
+            this.txtpagacon.TabIndex = 78;
             // 
             // label6
             // 
@@ -261,19 +253,19 @@
             this.label6.TabIndex = 81;
             this.label6.Text = "Total:";
             // 
-            // textBox6
+            // txttotal
             // 
-            this.textBox6.Location = new System.Drawing.Point(653, 554);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(114, 30);
-            this.textBox6.TabIndex = 80;
+            this.txttotal.Location = new System.Drawing.Point(653, 554);
+            this.txttotal.Name = "txttotal";
+            this.txttotal.Size = new System.Drawing.Size(114, 30);
+            this.txttotal.TabIndex = 80;
             // 
-            // textBox7
+            // txtcancelar
             // 
-            this.textBox7.Location = new System.Drawing.Point(584, 14);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(114, 30);
-            this.textBox7.TabIndex = 82;
+            this.txtcancelar.Location = new System.Drawing.Point(584, 14);
+            this.txtcancelar.Name = "txtcancelar";
+            this.txtcancelar.Size = new System.Drawing.Size(114, 30);
+            this.txtcancelar.TabIndex = 82;
             // 
             // btncancelar
             // 
@@ -284,42 +276,49 @@
             this.btncancelar.Text = "Cancelar";
             this.btncancelar.UseVisualStyleBackColor = true;
             // 
+            // txtbuscarcliente
+            // 
+            this.txtbuscarcliente.Location = new System.Drawing.Point(105, 51);
+            this.txtbuscarcliente.Name = "txtbuscarcliente";
+            this.txtbuscarcliente.Size = new System.Drawing.Size(330, 30);
+            this.txtbuscarcliente.TabIndex = 84;
+            // 
             // frmventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1047, 688);
+            this.Controls.Add(this.txtbuscarcliente);
             this.Controls.Add(this.btncancelar);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.txtcancelar);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txttotal);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtpagacon);
             this.Controls.Add(this.btnbuscar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtcambio);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtcantidad);
             this.Controls.Add(this.btnbuscarpedido);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpfecha);
             this.Controls.Add(this.btnbuscarproducto);
             this.Controls.Add(this.btnquitarproducto);
             this.Controls.Add(this.btnagregar);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.cbxcliente);
+            this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvVentas);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "frmventas";
             this.Text = "Ventas";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -328,31 +327,31 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvVentas;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox cbxcliente;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Button btnbuscarproducto;
         private System.Windows.Forms.Button btnquitarproducto;
         private System.Windows.Forms.Button btnagregar;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpfecha;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnbuscarpedido;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtcantidad;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtcambio;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnbuscar;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtpagacon;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txttotal;
+        private System.Windows.Forms.TextBox txtcancelar;
         private System.Windows.Forms.Button btncancelar;
+        public System.Windows.Forms.TextBox txtbuscarcliente;
     }
 }

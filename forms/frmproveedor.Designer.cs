@@ -666,6 +666,7 @@
             this.txtRFC.TabIndex = 10;
             this.txtRFC.Validar = false;
             this.txtRFC.VRFC = false;
+            this.txtRFC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRFC_KeyPress);
             // 
             // frmproveedor
             // 

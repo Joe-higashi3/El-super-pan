@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace WindowsFormsApp2.busquedas
 {
     public partial class frmbusquedaclientes : Form
@@ -34,6 +35,17 @@ namespace WindowsFormsApp2.busquedas
         {
             this.cLIENTETableAdapter.FillBy(this.dsCliente.CLIENTE, TXTTELEFONO.Text);
 
+        }
+
+        private void dgvbusquedacliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
     }
 }

@@ -25,6 +25,8 @@ namespace WindowsFormsApp2.forms
         }
         private void frmclientes_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'tipo_cliente.TIPO_CLIENTE' Puede moverla o quitarla según sea necesario.
+            this.tIPO_CLIENTETableAdapter.Fill(this.tipo_cliente.TIPO_CLIENTE);
             // TODO: esta línea de código carga datos en la tabla 'dsMunicipio.MUNICIPIO' Puede moverla o quitarla según sea necesario.
             this.mUNICIPIOTableAdapter.Fill(this.dsMunicipio.MUNICIPIO);
             // TODO: esta línea de código carga datos en la tabla 'panesitoDataSet2.CLIENTE' Puede moverla o quitarla según sea necesario.
@@ -51,6 +53,7 @@ namespace WindowsFormsApp2.forms
                 cliente.sNum_ext = txtnumext.Text;
                 cliente.sColonia = txtcolonia.Text;
                 cliente.iMunicipio = Convert.ToInt32(cmbxMunicipio.SelectedValue);
+                cliente.iTipo = Convert.ToInt32(cbxTipo.SelectedValue);
                 cliente.sStatus = cmbxstatus.Text.Substring(0, 1);
                 if (cliente.Guardar() == true)
                 {
@@ -139,6 +142,7 @@ namespace WindowsFormsApp2.forms
                 txtnumext.Text = this.panesitoDataSet2.CLIENTE[cLIENTEBindingSource2.Position].cl_num_exterior.ToString();
                 txtcolonia.Text = this.panesitoDataSet2.CLIENTE[cLIENTEBindingSource2.Position].cl_colonia.ToString();
                 cmbxMunicipio.SelectedValue = this.panesitoDataSet2.CLIENTE[cLIENTEBindingSource2.Position].cl_id_municipio;
+                cbxTipo.SelectedValue = this.panesitoDataSet2.CLIENTE[cLIENTEBindingSource2.Position].cl_id_municipio;
                 string sSTATUS;
                 sSTATUS = this.panesitoDataSet2.CLIENTE[cLIENTEBindingSource2.Position].cl_status.ToString();
                 switch (sSTATUS)

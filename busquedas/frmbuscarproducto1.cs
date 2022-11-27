@@ -24,14 +24,20 @@ namespace WindowsFormsApp2.forms
 
         }
 
-        private void txtid_TextChanged(object sender, EventArgs e)
+        private void txtId_TextChanged(object sender, EventArgs e)
         {
-            //this.pRODUCTOTableAdapter.FillBy(this.buscarproducto.PRODUCTO, Convert.ToInt32(txtid.Text));
+            this.pRODUCTOTableAdapter.FillBy(this.buscarproducto.PRODUCTO, Convert.ToInt32(txtId.Text));
         }
 
         private void TXTNOMBRE_TextChanged(object sender, EventArgs e)
         {
             this.pRODUCTOTableAdapter.Fill(this.buscarproducto.PRODUCTO,TXTNOMBRE.Text);
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
     }
 }

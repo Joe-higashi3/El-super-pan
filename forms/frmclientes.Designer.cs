@@ -42,18 +42,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.dtwclientes = new System.Windows.Forms.DataGridView();
-            this.clidclienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clapellidopatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clapellidomatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cltelefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clcalleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnuminteriorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnumexteriorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clcoloniaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clidmunicipioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mu_descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cLIENTEBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.panesitoDataSet2 = new WindowsFormsApp2.panesitoDataSet2();
             this.label10 = new System.Windows.Forms.Label();
@@ -74,6 +62,24 @@
             this.txtnumext = new WindowsFormsApp2.Utilerias.Validacion();
             this.txtcalle = new WindowsFormsApp2.Utilerias.Validacion();
             this.errorValidacionn = new System.Windows.Forms.ErrorProvider(this.components);
+            this.cbxTipo = new System.Windows.Forms.ComboBox();
+            this.tIPOCLIENTEBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tipo_cliente = new WindowsFormsApp2.Tipo_cliente();
+            this.label12 = new System.Windows.Forms.Label();
+            this.tIPO_CLIENTETableAdapter = new WindowsFormsApp2.Tipo_clienteTableAdapters.TIPO_CLIENTETableAdapter();
+            this.clidclienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clapellidopatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clapellidomatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tc_descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cltelefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clcalleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnuminteriorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnumexteriorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clcoloniaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clidmunicipioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mu_descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtwclientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cLIENTEBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panesitoDataSet2)).BeginInit();
@@ -81,11 +87,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dsMunicipio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorValidacion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorValidacionn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tIPOCLIENTEBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipo_cliente)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(777, 159);
+            this.btnCancelar.Location = new System.Drawing.Point(811, 181);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(154, 39);
             this.btnCancelar.TabIndex = 22;
@@ -95,7 +103,7 @@
             // 
             // btnguardar
             // 
-            this.btnguardar.Location = new System.Drawing.Point(617, 159);
+            this.btnguardar.Location = new System.Drawing.Point(651, 181);
             this.btnguardar.Name = "btnguardar";
             this.btnguardar.Size = new System.Drawing.Size(154, 39);
             this.btnguardar.TabIndex = 18;
@@ -204,6 +212,7 @@
             this.clnombreDataGridViewTextBoxColumn,
             this.clapellidopatDataGridViewTextBoxColumn,
             this.clapellidomatDataGridViewTextBoxColumn,
+            this.tc_descripcion,
             this.cltelefonoDataGridViewTextBoxColumn,
             this.clcalleDataGridViewTextBoxColumn,
             this.clnuminteriorDataGridViewTextBoxColumn,
@@ -222,110 +231,6 @@
             this.dtwclientes.TabIndex = 36;
             this.dtwclientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtwclientes_CellContentClick);
             this.dtwclientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtwclientes_CellContentClick);
-            // 
-            // clidclienteDataGridViewTextBoxColumn
-            // 
-            this.clidclienteDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.clidclienteDataGridViewTextBoxColumn.DataPropertyName = "cl_id_cliente";
-            this.clidclienteDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.clidclienteDataGridViewTextBoxColumn.Name = "clidclienteDataGridViewTextBoxColumn";
-            this.clidclienteDataGridViewTextBoxColumn.ReadOnly = true;
-            this.clidclienteDataGridViewTextBoxColumn.Width = 59;
-            // 
-            // clnombreDataGridViewTextBoxColumn
-            // 
-            this.clnombreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.clnombreDataGridViewTextBoxColumn.DataPropertyName = "cl_nombre";
-            this.clnombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.clnombreDataGridViewTextBoxColumn.Name = "clnombreDataGridViewTextBoxColumn";
-            this.clnombreDataGridViewTextBoxColumn.ReadOnly = true;
-            this.clnombreDataGridViewTextBoxColumn.Width = 116;
-            // 
-            // clapellidopatDataGridViewTextBoxColumn
-            // 
-            this.clapellidopatDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.clapellidopatDataGridViewTextBoxColumn.DataPropertyName = "cl_apellido_pat";
-            this.clapellidopatDataGridViewTextBoxColumn.HeaderText = "Apellido Paterno";
-            this.clapellidopatDataGridViewTextBoxColumn.Name = "clapellidopatDataGridViewTextBoxColumn";
-            this.clapellidopatDataGridViewTextBoxColumn.ReadOnly = true;
-            this.clapellidopatDataGridViewTextBoxColumn.Width = 182;
-            // 
-            // clapellidomatDataGridViewTextBoxColumn
-            // 
-            this.clapellidomatDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.clapellidomatDataGridViewTextBoxColumn.DataPropertyName = "cl_apellido_mat";
-            this.clapellidomatDataGridViewTextBoxColumn.HeaderText = "Apellido Materno";
-            this.clapellidomatDataGridViewTextBoxColumn.Name = "clapellidomatDataGridViewTextBoxColumn";
-            this.clapellidomatDataGridViewTextBoxColumn.ReadOnly = true;
-            this.clapellidomatDataGridViewTextBoxColumn.Width = 186;
-            // 
-            // cltelefonoDataGridViewTextBoxColumn
-            // 
-            this.cltelefonoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.cltelefonoDataGridViewTextBoxColumn.DataPropertyName = "cl_telefono";
-            this.cltelefonoDataGridViewTextBoxColumn.HeaderText = "Telefono";
-            this.cltelefonoDataGridViewTextBoxColumn.Name = "cltelefonoDataGridViewTextBoxColumn";
-            this.cltelefonoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.cltelefonoDataGridViewTextBoxColumn.Width = 126;
-            // 
-            // clcalleDataGridViewTextBoxColumn
-            // 
-            this.clcalleDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.clcalleDataGridViewTextBoxColumn.DataPropertyName = "cl_calle";
-            this.clcalleDataGridViewTextBoxColumn.HeaderText = "Calle";
-            this.clcalleDataGridViewTextBoxColumn.Name = "clcalleDataGridViewTextBoxColumn";
-            this.clcalleDataGridViewTextBoxColumn.ReadOnly = true;
-            this.clcalleDataGridViewTextBoxColumn.Width = 91;
-            // 
-            // clnuminteriorDataGridViewTextBoxColumn
-            // 
-            this.clnuminteriorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.clnuminteriorDataGridViewTextBoxColumn.DataPropertyName = "cl_num_interior";
-            this.clnuminteriorDataGridViewTextBoxColumn.HeaderText = "Num. Int.";
-            this.clnuminteriorDataGridViewTextBoxColumn.Name = "clnuminteriorDataGridViewTextBoxColumn";
-            this.clnuminteriorDataGridViewTextBoxColumn.ReadOnly = true;
-            this.clnuminteriorDataGridViewTextBoxColumn.Width = 117;
-            // 
-            // clnumexteriorDataGridViewTextBoxColumn
-            // 
-            this.clnumexteriorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.clnumexteriorDataGridViewTextBoxColumn.DataPropertyName = "cl_num_exterior";
-            this.clnumexteriorDataGridViewTextBoxColumn.HeaderText = "Num. Ext.";
-            this.clnumexteriorDataGridViewTextBoxColumn.Name = "clnumexteriorDataGridViewTextBoxColumn";
-            this.clnumexteriorDataGridViewTextBoxColumn.ReadOnly = true;
-            this.clnumexteriorDataGridViewTextBoxColumn.Width = 123;
-            // 
-            // clcoloniaDataGridViewTextBoxColumn
-            // 
-            this.clcoloniaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.clcoloniaDataGridViewTextBoxColumn.DataPropertyName = "cl_colonia";
-            this.clcoloniaDataGridViewTextBoxColumn.HeaderText = "Colonia";
-            this.clcoloniaDataGridViewTextBoxColumn.Name = "clcoloniaDataGridViewTextBoxColumn";
-            this.clcoloniaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.clcoloniaDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // clidmunicipioDataGridViewTextBoxColumn
-            // 
-            this.clidmunicipioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.clidmunicipioDataGridViewTextBoxColumn.DataPropertyName = "cl_id_municipio";
-            this.clidmunicipioDataGridViewTextBoxColumn.HeaderText = "Municipio";
-            this.clidmunicipioDataGridViewTextBoxColumn.Name = "clidmunicipioDataGridViewTextBoxColumn";
-            this.clidmunicipioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.clidmunicipioDataGridViewTextBoxColumn.Width = 133;
-            // 
-            // mu_descripcion
-            // 
-            this.mu_descripcion.DataPropertyName = "mu_descripcion";
-            this.mu_descripcion.HeaderText = "mu_descripcion";
-            this.mu_descripcion.Name = "mu_descripcion";
-            this.mu_descripcion.ReadOnly = true;
-            // 
-            // cl_status
-            // 
-            this.cl_status.DataPropertyName = "cl_status";
-            this.cl_status.HeaderText = "Status";
-            this.cl_status.Name = "cl_status";
-            this.cl_status.ReadOnly = true;
             // 
             // cLIENTEBindingSource2
             // 
@@ -515,11 +420,162 @@
             // 
             this.errorValidacionn.ContainerControl = this;
             // 
+            // cbxTipo
+            // 
+            this.cbxTipo.AutoCompleteCustomSource.AddRange(new string[] {
+            "Activo",
+            "Inactivo"});
+            this.cbxTipo.DataSource = this.tIPOCLIENTEBindingSource;
+            this.cbxTipo.DisplayMember = "tc_descripcion";
+            this.cbxTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxTipo.FormattingEnabled = true;
+            this.cbxTipo.Location = new System.Drawing.Point(617, 133);
+            this.cbxTipo.Name = "cbxTipo";
+            this.cbxTipo.Size = new System.Drawing.Size(213, 33);
+            this.cbxTipo.TabIndex = 52;
+            this.cbxTipo.ValueMember = "tc_id";
+            // 
+            // tIPOCLIENTEBindingSource
+            // 
+            this.tIPOCLIENTEBindingSource.DataMember = "TIPO_CLIENTE";
+            this.tIPOCLIENTEBindingSource.DataSource = this.tipo_cliente;
+            // 
+            // tipo_cliente
+            // 
+            this.tipo_cliente.DataSetName = "Tipo_cliente";
+            this.tipo_cliente.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(549, 136);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(62, 25);
+            this.label12.TabIndex = 51;
+            this.label12.Text = "Tipo:";
+            // 
+            // tIPO_CLIENTETableAdapter
+            // 
+            this.tIPO_CLIENTETableAdapter.ClearBeforeFill = true;
+            // 
+            // clidclienteDataGridViewTextBoxColumn
+            // 
+            this.clidclienteDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.clidclienteDataGridViewTextBoxColumn.DataPropertyName = "cl_id_cliente";
+            this.clidclienteDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.clidclienteDataGridViewTextBoxColumn.Name = "clidclienteDataGridViewTextBoxColumn";
+            this.clidclienteDataGridViewTextBoxColumn.ReadOnly = true;
+            this.clidclienteDataGridViewTextBoxColumn.Width = 59;
+            // 
+            // clnombreDataGridViewTextBoxColumn
+            // 
+            this.clnombreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.clnombreDataGridViewTextBoxColumn.DataPropertyName = "cl_nombre";
+            this.clnombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.clnombreDataGridViewTextBoxColumn.Name = "clnombreDataGridViewTextBoxColumn";
+            this.clnombreDataGridViewTextBoxColumn.ReadOnly = true;
+            this.clnombreDataGridViewTextBoxColumn.Width = 116;
+            // 
+            // clapellidopatDataGridViewTextBoxColumn
+            // 
+            this.clapellidopatDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.clapellidopatDataGridViewTextBoxColumn.DataPropertyName = "cl_apellido_pat";
+            this.clapellidopatDataGridViewTextBoxColumn.HeaderText = "Apellido Paterno";
+            this.clapellidopatDataGridViewTextBoxColumn.Name = "clapellidopatDataGridViewTextBoxColumn";
+            this.clapellidopatDataGridViewTextBoxColumn.ReadOnly = true;
+            this.clapellidopatDataGridViewTextBoxColumn.Width = 182;
+            // 
+            // clapellidomatDataGridViewTextBoxColumn
+            // 
+            this.clapellidomatDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.clapellidomatDataGridViewTextBoxColumn.DataPropertyName = "cl_apellido_mat";
+            this.clapellidomatDataGridViewTextBoxColumn.HeaderText = "Apellido Materno";
+            this.clapellidomatDataGridViewTextBoxColumn.Name = "clapellidomatDataGridViewTextBoxColumn";
+            this.clapellidomatDataGridViewTextBoxColumn.ReadOnly = true;
+            this.clapellidomatDataGridViewTextBoxColumn.Width = 186;
+            // 
+            // tc_descripcion
+            // 
+            this.tc_descripcion.DataPropertyName = "tc_descripcion";
+            this.tc_descripcion.HeaderText = "Tipo Cliente";
+            this.tc_descripcion.Name = "tc_descripcion";
+            this.tc_descripcion.ReadOnly = true;
+            // 
+            // cltelefonoDataGridViewTextBoxColumn
+            // 
+            this.cltelefonoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.cltelefonoDataGridViewTextBoxColumn.DataPropertyName = "cl_telefono";
+            this.cltelefonoDataGridViewTextBoxColumn.HeaderText = "Telefono";
+            this.cltelefonoDataGridViewTextBoxColumn.Name = "cltelefonoDataGridViewTextBoxColumn";
+            this.cltelefonoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cltelefonoDataGridViewTextBoxColumn.Width = 126;
+            // 
+            // clcalleDataGridViewTextBoxColumn
+            // 
+            this.clcalleDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.clcalleDataGridViewTextBoxColumn.DataPropertyName = "cl_calle";
+            this.clcalleDataGridViewTextBoxColumn.HeaderText = "Calle";
+            this.clcalleDataGridViewTextBoxColumn.Name = "clcalleDataGridViewTextBoxColumn";
+            this.clcalleDataGridViewTextBoxColumn.ReadOnly = true;
+            this.clcalleDataGridViewTextBoxColumn.Width = 91;
+            // 
+            // clnuminteriorDataGridViewTextBoxColumn
+            // 
+            this.clnuminteriorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.clnuminteriorDataGridViewTextBoxColumn.DataPropertyName = "cl_num_interior";
+            this.clnuminteriorDataGridViewTextBoxColumn.HeaderText = "Num. Int.";
+            this.clnuminteriorDataGridViewTextBoxColumn.Name = "clnuminteriorDataGridViewTextBoxColumn";
+            this.clnuminteriorDataGridViewTextBoxColumn.ReadOnly = true;
+            this.clnuminteriorDataGridViewTextBoxColumn.Width = 117;
+            // 
+            // clnumexteriorDataGridViewTextBoxColumn
+            // 
+            this.clnumexteriorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.clnumexteriorDataGridViewTextBoxColumn.DataPropertyName = "cl_num_exterior";
+            this.clnumexteriorDataGridViewTextBoxColumn.HeaderText = "Num. Ext.";
+            this.clnumexteriorDataGridViewTextBoxColumn.Name = "clnumexteriorDataGridViewTextBoxColumn";
+            this.clnumexteriorDataGridViewTextBoxColumn.ReadOnly = true;
+            this.clnumexteriorDataGridViewTextBoxColumn.Width = 123;
+            // 
+            // clcoloniaDataGridViewTextBoxColumn
+            // 
+            this.clcoloniaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.clcoloniaDataGridViewTextBoxColumn.DataPropertyName = "cl_colonia";
+            this.clcoloniaDataGridViewTextBoxColumn.HeaderText = "Colonia";
+            this.clcoloniaDataGridViewTextBoxColumn.Name = "clcoloniaDataGridViewTextBoxColumn";
+            this.clcoloniaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.clcoloniaDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // clidmunicipioDataGridViewTextBoxColumn
+            // 
+            this.clidmunicipioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.clidmunicipioDataGridViewTextBoxColumn.DataPropertyName = "cl_id_municipio";
+            this.clidmunicipioDataGridViewTextBoxColumn.HeaderText = "Municipio";
+            this.clidmunicipioDataGridViewTextBoxColumn.Name = "clidmunicipioDataGridViewTextBoxColumn";
+            this.clidmunicipioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.clidmunicipioDataGridViewTextBoxColumn.Width = 133;
+            // 
+            // mu_descripcion
+            // 
+            this.mu_descripcion.DataPropertyName = "mu_descripcion";
+            this.mu_descripcion.HeaderText = "Descripcion";
+            this.mu_descripcion.Name = "mu_descripcion";
+            this.mu_descripcion.ReadOnly = true;
+            // 
+            // cl_status
+            // 
+            this.cl_status.DataPropertyName = "cl_status";
+            this.cl_status.HeaderText = "Status";
+            this.cl_status.Name = "cl_status";
+            this.cl_status.ReadOnly = true;
+            // 
             // frmclientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1101, 593);
+            this.Controls.Add(this.cbxTipo);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.txtcalle);
             this.Controls.Add(this.txtnumext);
             this.Controls.Add(this.txtnumint);
@@ -557,6 +613,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dsMunicipio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorValidacion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorValidacionn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tIPOCLIENTEBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipo_cliente)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -583,18 +641,6 @@
         private panesitoDataSet2 panesitoDataSet2;
         private System.Windows.Forms.BindingSource cLIENTEBindingSource2;
         private panesitoDataSet2TableAdapters.CLIENTETableAdapter cLIENTETableAdapter2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clidclienteDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clnombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clapellidopatDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clapellidomatDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cltelefonoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clcalleDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clnuminteriorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clnumexteriorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clcoloniaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clidmunicipioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mu_descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cl_status;
         private DsMunicipio dsMunicipio;
         private System.Windows.Forms.BindingSource mUNICIPIOBindingSource;
         private DsMunicipioTableAdapters.MUNICIPIOTableAdapter mUNICIPIOTableAdapter;
@@ -608,5 +654,23 @@
         private Utilerias.Validacion txtnombre;
         private Utilerias.Validacion txttelefono;
         private System.Windows.Forms.ErrorProvider errorValidacionn;
+        private System.Windows.Forms.ComboBox cbxTipo;
+        private System.Windows.Forms.Label label12;
+        private Tipo_cliente tipo_cliente;
+        private System.Windows.Forms.BindingSource tIPOCLIENTEBindingSource;
+        private Tipo_clienteTableAdapters.TIPO_CLIENTETableAdapter tIPO_CLIENTETableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clidclienteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clnombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clapellidopatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clapellidomatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tc_descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cltelefonoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clcalleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clnuminteriorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clnumexteriorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clcoloniaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clidmunicipioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mu_descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cl_status;
     }
 }

@@ -301,6 +301,10 @@ namespace WindowsFormsApp2 {
             
             private global::System.Data.DataColumn columncl_status;
             
+            private global::System.Data.DataColumn columncl_id_tipocl;
+            
+            private global::System.Data.DataColumn columntc_descripcion;
+            
             private global::System.Data.DataColumn columnmu_descripcion;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -426,6 +430,22 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn cl_id_tipoclColumn {
+                get {
+                    return this.columncl_id_tipocl;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn tc_descripcionColumn {
+                get {
+                    return this.columntc_descripcion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn mu_descripcionColumn {
                 get {
                     return this.columnmu_descripcion;
@@ -469,7 +489,7 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public CLIENTERow AddCLIENTERow(int cl_id_cliente, string cl_nombre, string cl_apellido_pat, string cl_apellido_mat, string cl_telefono, string cl_calle, string cl_num_interior, string cl_num_exterior, string cl_colonia, int cl_id_municipio, string cl_status, string mu_descripcion) {
+            public CLIENTERow AddCLIENTERow(int cl_id_cliente, string cl_nombre, string cl_apellido_pat, string cl_apellido_mat, string cl_telefono, string cl_calle, string cl_num_interior, string cl_num_exterior, string cl_colonia, int cl_id_municipio, string cl_status, int cl_id_tipocl, string tc_descripcion, string mu_descripcion) {
                 CLIENTERow rowCLIENTERow = ((CLIENTERow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         cl_id_cliente,
@@ -483,6 +503,8 @@ namespace WindowsFormsApp2 {
                         cl_colonia,
                         cl_id_municipio,
                         cl_status,
+                        cl_id_tipocl,
+                        tc_descripcion,
                         mu_descripcion};
                 rowCLIENTERow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCLIENTERow);
@@ -524,6 +546,8 @@ namespace WindowsFormsApp2 {
                 this.columncl_colonia = base.Columns["cl_colonia"];
                 this.columncl_id_municipio = base.Columns["cl_id_municipio"];
                 this.columncl_status = base.Columns["cl_status"];
+                this.columncl_id_tipocl = base.Columns["cl_id_tipocl"];
+                this.columntc_descripcion = base.Columns["tc_descripcion"];
                 this.columnmu_descripcion = base.Columns["mu_descripcion"];
             }
             
@@ -552,6 +576,10 @@ namespace WindowsFormsApp2 {
                 base.Columns.Add(this.columncl_id_municipio);
                 this.columncl_status = new global::System.Data.DataColumn("cl_status", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncl_status);
+                this.columncl_id_tipocl = new global::System.Data.DataColumn("cl_id_tipocl", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncl_id_tipocl);
+                this.columntc_descripcion = new global::System.Data.DataColumn("tc_descripcion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntc_descripcion);
                 this.columnmu_descripcion = new global::System.Data.DataColumn("mu_descripcion", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnmu_descripcion);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
@@ -575,6 +603,8 @@ namespace WindowsFormsApp2 {
                 this.columncl_id_municipio.AllowDBNull = false;
                 this.columncl_status.AllowDBNull = false;
                 this.columncl_status.MaxLength = 1;
+                this.columncl_id_tipocl.AllowDBNull = false;
+                this.columntc_descripcion.MaxLength = 100;
                 this.columnmu_descripcion.AllowDBNull = false;
                 this.columnmu_descripcion.MaxLength = 100;
             }
@@ -850,6 +880,33 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int cl_id_tipocl {
+                get {
+                    return ((int)(this[this.tableCLIENTE.cl_id_tipoclColumn]));
+                }
+                set {
+                    this[this.tableCLIENTE.cl_id_tipoclColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string tc_descripcion {
+                get {
+                    try {
+                        return ((string)(this[this.tableCLIENTE.tc_descripcionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'tc_descripcion\' de la tabla \'CLIENTE\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCLIENTE.tc_descripcionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string mu_descripcion {
                 get {
                     return ((string)(this[this.tableCLIENTE.mu_descripcionColumn]));
@@ -881,6 +938,18 @@ namespace WindowsFormsApp2 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setcl_num_exteriorNull() {
                 this[this.tableCLIENTE.cl_num_exteriorColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Istc_descripcionNull() {
+                return this.IsNull(this.tableCLIENTE.tc_descripcionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Settc_descripcionNull() {
+                this[this.tableCLIENTE.tc_descripcionColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1054,6 +1123,8 @@ namespace WindowsFormsApp2.panesitoDataSet2TableAdapters {
             tableMapping.ColumnMappings.Add("cl_colonia", "cl_colonia");
             tableMapping.ColumnMappings.Add("cl_id_municipio", "cl_id_municipio");
             tableMapping.ColumnMappings.Add("cl_status", "cl_status");
+            tableMapping.ColumnMappings.Add("cl_id_tipocl", "cl_id_tipocl");
+            tableMapping.ColumnMappings.Add("tc_descripcion", "tc_descripcion");
             tableMapping.ColumnMappings.Add("mu_descripcion", "mu_descripcion");
             this._adapter.TableMappings.Add(tableMapping);
         }
@@ -1072,8 +1143,9 @@ namespace WindowsFormsApp2.panesitoDataSet2TableAdapters {
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT CLIENTE.cl_id_cliente, CLIENTE.cl_nombre, CLIENTE.cl_apellido_pat, CLIENTE.cl_apellido_mat, CLIENTE.cl_telefono, CLIENTE.cl_calle, CLIENTE.cl_num_interior, CLIENTE.cl_num_exterior, CLIENTE.cl_colonia, CLIENTE.cl_id_municipio, 
-                  MU.mu_descripcion, CLIENTE.cl_status
+                  CLIENTE.cl_status, CLIENTE.cl_id_tipocl, TC.tc_descripcion, MU.mu_descripcion
 FROM     CLIENTE INNER JOIN
+                  TIPO_CLIENTE AS TC ON CLIENTE.cl_id_tipocl = TC.tc_id INNER JOIN
                   MUNICIPIO AS MU ON CLIENTE.cl_id_municipio = MU.mu_id_municipio";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }

@@ -21,6 +21,7 @@ namespace WindowsFormsApp2.clases
         public string sNum_ext { get; set; }
         public string sColonia { get; set; }
         public int iMunicipio { get; set; }
+        public int iTipo { get; set; }
         public string sStatus { get; set; }
 
         public bool Guardar()
@@ -42,6 +43,7 @@ namespace WindowsFormsApp2.clases
             cmd.Parameters.AddWithValue("@NUM_EXT", sNum_ext);
             cmd.Parameters.AddWithValue("@COLONIA", sColonia);
             cmd.Parameters.AddWithValue("@MUNICIPIO", iMunicipio);
+            cmd.Parameters.AddWithValue("@TIPO", iTipo);
             cmd.Parameters.AddWithValue("@STATUS", sStatus);
             try
             {
