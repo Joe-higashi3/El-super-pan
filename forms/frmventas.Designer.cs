@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmventas));
             this.dgvVentas = new System.Windows.Forms.DataGridView();
             this.label9 = new System.Windows.Forms.Label();
@@ -55,6 +56,7 @@
             this.txtcancelar = new System.Windows.Forms.TextBox();
             this.btncancelar = new System.Windows.Forms.Button();
             this.txtbuscarcliente = new System.Windows.Forms.TextBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -124,10 +126,11 @@
             // 
             // dtpfecha
             // 
-            this.dtpfecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpfecha.Location = new System.Drawing.Point(861, 12);
+            this.dtpfecha.CustomFormat = "dd/MM/yyyy hh:mm";
+            this.dtpfecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpfecha.Location = new System.Drawing.Point(818, 19);
             this.dtpfecha.Name = "dtpfecha";
-            this.dtpfecha.Size = new System.Drawing.Size(156, 30);
+            this.dtpfecha.Size = new System.Drawing.Size(217, 30);
             this.dtpfecha.TabIndex = 66;
             // 
             // button4
@@ -283,6 +286,10 @@
             this.txtbuscarcliente.Size = new System.Drawing.Size(330, 30);
             this.txtbuscarcliente.TabIndex = 84;
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // frmventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
@@ -353,5 +360,6 @@
         private System.Windows.Forms.TextBox txtcancelar;
         private System.Windows.Forms.Button btncancelar;
         public System.Windows.Forms.TextBox txtbuscarcliente;
+        private System.Windows.Forms.Timer timer1;
     }
 }

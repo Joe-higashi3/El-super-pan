@@ -73,5 +73,10 @@ namespace WindowsFormsApp2.forms
             frmbusquedapedidos bpd = new frmbusquedapedidos();
             bpd.ShowDialog();
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+        }
     }
 }
