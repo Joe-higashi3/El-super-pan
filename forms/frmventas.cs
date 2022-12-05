@@ -74,7 +74,7 @@ namespace WindowsFormsApp2.forms
             bpd.ShowDialog();
         }
 
-        private void frmventas_Load(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
 
         }
