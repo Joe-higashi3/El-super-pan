@@ -10,7 +10,9 @@ namespace WindowsFormsApp2.clases
     {
         public static string conn()
         {
-            string miconexion = @"Data Source=SSLOFJOE\TRABAJOSBD;Initial Catalog=panesito;Integrated Security=True";
+
+            string miconexion = @"Data Source=M3\BASEDATOSJUAN;Initial Catalog=panesito;Integrated Security=True";
+            //            string miconexion = @"Data Source=SSLOFJOE\TRABAJOSBD;Initial Catalog=panesito;Integrated Security=True";
             return miconexion;
         }
     }

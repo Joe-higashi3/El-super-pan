@@ -60,6 +60,12 @@
     <Compile Include="busquedas\frmbusquedaclientes.Designer.cs">
       <DependentUpon>frmbusquedaclientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="busquedas\frmbusquedainsumo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="busquedas\frmbusquedainsumo.Designer.cs">
+      <DependentUpon>frmbusquedainsumo.cs</DependentUpon>
+    </Compile>
     <Compile Include="busquedas\frmbusquedapedidos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,7 @@
     <Compile Include="clases\clsalmacen.cs" />
     <Compile Include="clases\clscategoria.cs" />
     <Compile Include="clases\clscliente.cs" />
+    <Compile Include="clases\clscompra.cs" />
     <Compile Include="clases\clsempleado.cs" />
     <Compile Include="clases\clsinsumo.cs" />
     <Compile Include="clases\clspedido.cs" />
@@ -139,6 +146,12 @@
     </Compile>
     <Compile Include="forms\frmclientes.Designer.cs">
       <DependentUpon>frmclientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmcompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmcompra.Designer.cs">
+      <DependentUpon>frmcompra.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\frmempleados.cs">
       <SubType>Form</SubType>
@@ -389,6 +402,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\frmclientes.resx">
       <DependentUpon>frmclientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmcompra.resx">
+      <DependentUpon>frmcompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\frmempleados.resx">
       <DependentUpon>frmempleados.cs</DependentUpon>
