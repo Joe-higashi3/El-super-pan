@@ -46,6 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BuscarInsumo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BuscarInsumo.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Buscarproducto.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -56,6 +61,12 @@
     </Compile>
     <Compile Include="busquedas\frmbusquedaclientes.Designer.cs">
       <DependentUpon>frmbusquedaclientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="busquedas\frmbusquedainsumo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="busquedas\frmbusquedainsumo.Designer.cs">
+      <DependentUpon>frmbusquedainsumo.cs</DependentUpon>
     </Compile>
     <Compile Include="busquedas\frmbusquedapedidos.cs">
       <SubType>Form</SubType>
@@ -346,6 +357,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecetaDetalle.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RecetaDetalle.xsd</DependentUpon>
+    </Compile>
     <Compile Include="reportes\frmrepopedidos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -366,6 +382,9 @@
     </Compile>
     <EmbeddedResource Include="busquedas\frmbusquedaclientes.resx">
       <DependentUpon>frmbusquedaclientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="busquedas\frmbusquedainsumo.resx">
+      <DependentUpon>frmbusquedainsumo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="busquedas\frmbusquedapedidos.resx">
       <DependentUpon>frmbusquedapedidos.cs</DependentUpon>
@@ -430,6 +449,17 @@
     <EmbeddedResource Include="reportes\frmrepoventas.resx">
       <DependentUpon>frmrepoventas.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="BuscarInsumo.xsc">
+      <DependentUpon>BuscarInsumo.xsd</DependentUpon>
+    </None>
+    <None Include="BuscarInsumo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BuscarInsumo.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BuscarInsumo.xss">
+      <DependentUpon>BuscarInsumo.xsd</DependentUpon>
+    </None>
     <None Include="Buscarproducto.xsc">
       <DependentUpon>Buscarproducto.xsd</DependentUpon>
     </None>
@@ -824,6 +854,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="RecetaDetalle.xsc">
+      <DependentUpon>RecetaDetalle.xsd</DependentUpon>
+    </None>
+    <None Include="RecetaDetalle.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RecetaDetalle.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RecetaDetalle.xss">
+      <DependentUpon>RecetaDetalle.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

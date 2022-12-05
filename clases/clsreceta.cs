@@ -15,6 +15,7 @@ namespace WindowsFormsApp2.clases
         public string sNombre { get; set; }
         public string sGrupo { get; set; }
         public string sStatus { get; set; }
+        public int iIdInsumo { get; set; }
 
         public bool GuardarReceta()
         {
@@ -28,6 +29,7 @@ namespace WindowsFormsApp2.clases
             cmd.Parameters.AddWithValue("@IDRECETA", iIdreceta);
             cmd.Parameters.AddWithValue("@NOMBRE", sNombre);
             cmd.Parameters.AddWithValue("@GRUPO", sGrupo);
+            cmd.Parameters.AddWithValue("@INSUMO", iIdInsumo);
             cmd.Parameters.AddWithValue("@STATUS", sStatus);
             try
             {

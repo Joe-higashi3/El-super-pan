@@ -48,7 +48,7 @@ namespace WindowsFormsApp2.forms
             clsinsumo insumo = new clsinsumo();
             insumo.iIdinsumo = Convert.ToInt32(txtid.Text);
             insumo.sNombre = txtnombre.Text;
-            insumo.fCosto = float.Parse(txtcosto.Text);
+            //insumo.fCosto = float.Parse(txtcosto.Text);
             insumo.iIdUnidad = Convert.ToInt32(cmbxunidad.SelectedValue);
             insumo.sStatus = cmbxistatus.Text.Substring(0, 1);
 
@@ -87,7 +87,7 @@ namespace WindowsFormsApp2.forms
         private void limpiar()
         {
             txtnombre.Clear();
-            txtcosto.Clear();
+            //txtcosto.Clear();
             consecutivo();
             this.iNSUMOTableAdapter2.Fill(this.panesitoInsumo.INSUMO);
             this.uNIDADTableAdapter2.Fill(this.panesitoUnidad.UNIDAD);
@@ -120,7 +120,7 @@ namespace WindowsFormsApp2.forms
         {
             txtid.Text = this.panesitoInsumo.INSUMO[iNSUMOBindingSource2.Position].in_id_insumo.ToString();
             txtnombre.Text = this.panesitoInsumo.INSUMO[iNSUMOBindingSource2.Position].in_nombre.ToString();
-            txtcosto.Text = this.panesitoInsumo.INSUMO[iNSUMOBindingSource2.Position].in_costo.ToString();
+            //txtcosto.Text = this.panesitoInsumo.INSUMO[iNSUMOBindingSource2.Position].in_costo.ToString();
             cmbxunidad.SelectedValue = this.panesitoUnidad.UNIDAD[uNIDADBindingSource2.Position].un_id_unidad;
             cmbxistatus.SelectedValue = this.panesitoInsumo.INSUMO[iNSUMOBindingSource2.Position].in_status;
             string sSTATUS;
@@ -174,7 +174,7 @@ namespace WindowsFormsApp2.forms
         private void txtcosto_KeyPress(object sender, KeyPressEventArgs e)
         {
             ValidarNumeros(sender, e);
-            txtcosto.Focus();
+            txtnombre.Focus();
         }
     }
 }
