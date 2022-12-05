@@ -71,5 +71,10 @@ namespace WindowsFormsApp2.forms
             GuardarCompra();
             limpiar();
         }
+
+        private void dgvVentas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
