@@ -41,6 +41,7 @@ namespace WindowsFormsApp2.clases
                cmd.Parameters.AddWithValue("@CANTIDAD", iCantidad);
                cmd.Parameters.AddWithValue("@PRECIO", fPrecio);
                cmd.Parameters.AddWithValue("@IMPORTE", fImporte);
+               
 
             try
             {

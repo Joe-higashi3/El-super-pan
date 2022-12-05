@@ -295,6 +295,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>panesitoDataSet8.xsd</DependentUpon>
     </Compile>
+    <Compile Include="panesitoDataSetCompraMovInv.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>panesitoDataSetCompraMovInv.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="panesitoDataSetMOVINV.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>panesitoDataSetMOVINV.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="panesitoDataSetmovinv1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>panesitoDataSetmovinv1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="panesitoEmpleado.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -695,6 +710,39 @@
     </None>
     <None Include="panesitoDataSet8.xss">
       <DependentUpon>panesitoDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoDataSetCompraMovInv.xsc">
+      <DependentUpon>panesitoDataSetCompraMovInv.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoDataSetCompraMovInv.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>panesitoDataSetCompraMovInv.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="panesitoDataSetCompraMovInv.xss">
+      <DependentUpon>panesitoDataSetCompraMovInv.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoDataSetMOVINV.xsc">
+      <DependentUpon>panesitoDataSetMOVINV.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoDataSetMOVINV.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>panesitoDataSetMOVINV.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="panesitoDataSetMOVINV.xss">
+      <DependentUpon>panesitoDataSetMOVINV.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoDataSetmovinv1.xsc">
+      <DependentUpon>panesitoDataSetmovinv1.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoDataSetmovinv1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>panesitoDataSetmovinv1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="panesitoDataSetmovinv1.xss">
+      <DependentUpon>panesitoDataSetmovinv1.xsd</DependentUpon>
     </None>
     <None Include="panesitoEmpleado.xsc">
       <DependentUpon>panesitoEmpleado.xsd</DependentUpon>

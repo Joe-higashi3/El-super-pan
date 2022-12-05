@@ -56,13 +56,17 @@ namespace WindowsFormsApp2.forms
             txtCodigoInsumoCompra.Clear();
             txtCantidadCompra.Clear();
             txtPrecioCompra.Clear();
-
+            //
+            this.mOV_INVTableAdapter.Fill(this.panesitoDataSetmovinv.MOV_INV);
+            //
             txtCodigoInsumoCompra.Focus();
         }
 
 
         private void frmcompra_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'panesitoDataSetmovinv.MOV_INV' Puede moverla o quitarla según sea necesario.
+            this.mOV_INVTableAdapter.Fill(this.panesitoDataSetmovinv.MOV_INV);
 
         }
 
@@ -74,7 +78,23 @@ namespace WindowsFormsApp2.forms
 
         private void dgvVentas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            txtidmovimientoCompra.Text = this.panesitoDataSetmovinv.MOV_INV[mOVINVBindingSource.Position].m_id_mov.ToString();
+            txttipomovimientoCompra.Text = this.panesitoDataSetmovinv.MOV_INV[mOVINVBindingSource.Position].m_tm_id.ToString();
+            txtidproveedorCompra.Text = this.panesitoDataSetmovinv.MOV_INV[mOVINVBindingSource.Position].m_id_prov.ToString();
+
+            txtCodigoInsumoCompra.Text = this.panesitoDataSetmovinv.MOV_INV[mOVINVBindingSource.Position].m_ap_id.ToString();
+            txtCantidadCompra.Text = this.panesitoDataSetmovinv.MOV_INV[mOVINVBindingSource.Position]
+
+//            txtTotalCompra.Text = this.panesitoDataSetmovinv.MOV_INV[mOVINVBindingSource.Position]
 
         }
+
+        /*       
+            //compra.iId_almacen = Convert.ToInt32();
+            (txtCantidadCompra.Text);
+            compra.fPrecio = float.Parse(txtPrecioCompra.Text);
+            //compra.fImporte = float.Parse(txtTotalCompra.Text);
+        */
+
     }
 }
