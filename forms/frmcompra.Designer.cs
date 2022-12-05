@@ -30,7 +30,6 @@
         {
             this.btnbuscarinsumo = new System.Windows.Forms.Button();
             this.btnquitarinsumo = new System.Windows.Forms.Button();
-            this.btnagregar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtTotalCompra = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -38,8 +37,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtCambioCompra = new System.Windows.Forms.TextBox();
             this.btnrealizarcompra = new System.Windows.Forms.Button();
-            this.txtbuscarcomprapf = new System.Windows.Forms.TextBox();
-            this.btnbuscar = new System.Windows.Forms.Button();
             this.dgvVentas = new System.Windows.Forms.DataGridView();
             this.dtpfechaCompra = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
@@ -77,19 +74,10 @@
             this.btnquitarinsumo.Text = "Quitar insumo";
             this.btnquitarinsumo.UseVisualStyleBackColor = true;
             // 
-            // btnagregar
-            // 
-            this.btnagregar.Location = new System.Drawing.Point(609, 299);
-            this.btnagregar.Name = "btnagregar";
-            this.btnagregar.Size = new System.Drawing.Size(190, 39);
-            this.btnagregar.TabIndex = 69;
-            this.btnagregar.Text = "Agregar";
-            this.btnagregar.UseVisualStyleBackColor = true;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(525, 356);
+            this.label6.Location = new System.Drawing.Point(522, 306);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(34, 13);
             this.label6.TabIndex = 87;
@@ -97,7 +85,7 @@
             // 
             // txtTotalCompra
             // 
-            this.txtTotalCompra.Location = new System.Drawing.Point(579, 356);
+            this.txtTotalCompra.Location = new System.Drawing.Point(562, 303);
             this.txtTotalCompra.Name = "txtTotalCompra";
             this.txtTotalCompra.Size = new System.Drawing.Size(114, 20);
             this.txtTotalCompra.TabIndex = 86;
@@ -105,7 +93,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(503, 388);
+            this.label5.Location = new System.Drawing.Point(500, 339);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 13);
             this.label5.TabIndex = 85;
@@ -113,7 +101,7 @@
             // 
             // txtPagaconCompra
             // 
-            this.txtPagaconCompra.Location = new System.Drawing.Point(579, 388);
+            this.txtPagaconCompra.Location = new System.Drawing.Point(562, 336);
             this.txtPagaconCompra.Name = "txtPagaconCompra";
             this.txtPagaconCompra.Size = new System.Drawing.Size(114, 20);
             this.txtPagaconCompra.TabIndex = 84;
@@ -121,7 +109,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(514, 417);
+            this.label3.Location = new System.Drawing.Point(511, 375);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 13);
             this.label3.TabIndex = 83;
@@ -129,7 +117,7 @@
             // 
             // txtCambioCompra
             // 
-            this.txtCambioCompra.Location = new System.Drawing.Point(579, 417);
+            this.txtCambioCompra.Location = new System.Drawing.Point(562, 372);
             this.txtCambioCompra.Name = "txtCambioCompra";
             this.txtCambioCompra.Size = new System.Drawing.Size(114, 20);
             this.txtCambioCompra.TabIndex = 82;
@@ -137,37 +125,22 @@
             // btnrealizarcompra
             // 
             this.btnrealizarcompra.Enabled = false;
-            this.btnrealizarcompra.Location = new System.Drawing.Point(725, 399);
+            this.btnrealizarcompra.Location = new System.Drawing.Point(721, 326);
             this.btnrealizarcompra.Name = "btnrealizarcompra";
             this.btnrealizarcompra.Size = new System.Drawing.Size(190, 39);
             this.btnrealizarcompra.TabIndex = 88;
             this.btnrealizarcompra.Text = "Realizar Compra";
             this.btnrealizarcompra.UseVisualStyleBackColor = true;
-            // 
-            // txtbuscarcomprapf
-            // 
-            this.txtbuscarcomprapf.Location = new System.Drawing.Point(42, 40);
-            this.txtbuscarcomprapf.Name = "txtbuscarcomprapf";
-            this.txtbuscarcomprapf.Size = new System.Drawing.Size(330, 20);
-            this.txtbuscarcomprapf.TabIndex = 91;
-            // 
-            // btnbuscar
-            // 
-            this.btnbuscar.Location = new System.Drawing.Point(389, 30);
-            this.btnbuscar.Name = "btnbuscar";
-            this.btnbuscar.Size = new System.Drawing.Size(88, 39);
-            this.btnbuscar.TabIndex = 90;
-            this.btnbuscar.Text = "Buscar";
-            this.btnbuscar.UseVisualStyleBackColor = true;
+            this.btnrealizarcompra.Click += new System.EventHandler(this.btnrealizarcompra_Click);
             // 
             // dgvVentas
             // 
             this.dgvVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVentas.Location = new System.Drawing.Point(1, 87);
+            this.dgvVentas.Location = new System.Drawing.Point(-3, 52);
             this.dgvVentas.Margin = new System.Windows.Forms.Padding(5);
             this.dgvVentas.Name = "dgvVentas";
             this.dgvVentas.RowTemplate.Height = 24;
-            this.dgvVentas.Size = new System.Drawing.Size(476, 356);
+            this.dgvVentas.Size = new System.Drawing.Size(495, 384);
             this.dgvVentas.TabIndex = 89;
             // 
             // dtpfechaCompra
@@ -312,8 +285,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtCodigoInsumoCompra);
             this.Controls.Add(this.dtpfechaCompra);
-            this.Controls.Add(this.txtbuscarcomprapf);
-            this.Controls.Add(this.btnbuscar);
             this.Controls.Add(this.dgvVentas);
             this.Controls.Add(this.btnrealizarcompra);
             this.Controls.Add(this.label6);
@@ -324,7 +295,6 @@
             this.Controls.Add(this.txtCambioCompra);
             this.Controls.Add(this.btnbuscarinsumo);
             this.Controls.Add(this.btnquitarinsumo);
-            this.Controls.Add(this.btnagregar);
             this.Name = "frmcompra";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmcompra";
@@ -338,7 +308,6 @@
         #endregion
         private System.Windows.Forms.Button btnbuscarinsumo;
         private System.Windows.Forms.Button btnquitarinsumo;
-        private System.Windows.Forms.Button btnagregar;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtTotalCompra;
         private System.Windows.Forms.Label label5;
@@ -346,8 +315,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtCambioCompra;
         private System.Windows.Forms.Button btnrealizarcompra;
-        public System.Windows.Forms.TextBox txtbuscarcomprapf;
-        private System.Windows.Forms.Button btnbuscar;
         private System.Windows.Forms.DataGridView dgvVentas;
         private System.Windows.Forms.DateTimePicker dtpfechaCompra;
         private System.Windows.Forms.Label label4;

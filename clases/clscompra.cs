@@ -23,7 +23,7 @@ namespace WindowsFormsApp2.clases
         //public DateTime dFecha { get; set; }
         public float fImporte { get; set; }
 
-        public bool Guardar()
+        public bool GuardarCompra()
         {
             SqlConnection conn = new SqlConnection(Conexion.conn());
             SqlCommand cmd = new SqlCommand("", conn);

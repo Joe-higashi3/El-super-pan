@@ -35,11 +35,41 @@ namespace WindowsFormsApp2.forms
             compra.iCantidad = Convert.ToInt32(txtCantidadCompra.Text);
             compra.fPrecio = float.Parse(txtPrecioCompra.Text);
             compra.fImporte = float.Parse(txtTotalCompra.Text);
+
+            if (compra.GuardarCompra() == true)
+            {
+                MessageBox.Show("Sus Datos se guardaron correctamente");
+            }
+            else
+            {
+                MessageBox.Show("Sus Datos no se pudieron guardar error: " + compra.error);
+
+            }
+
         }
+
+        private void limpiar()
+        {
+            txtidmovimientoCompra.Clear();
+            txttipomovimientoCompra.Clear();
+            txtidproveedorCompra.Clear();
+            txtCodigoInsumoCompra.Clear();
+            txtCantidadCompra.Clear();
+            txtPrecioCompra.Clear();
+
+            txtCodigoInsumoCompra.Focus();
+        }
+
 
         private void frmcompra_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnrealizarcompra_Click(object sender, EventArgs e)
+        {
+            GuardarCompra();
+            limpiar();
         }
     }
 }
