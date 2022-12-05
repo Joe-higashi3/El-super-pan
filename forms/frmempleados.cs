@@ -17,10 +17,13 @@ namespace WindowsFormsApp2.forms
         clases.Conexion objconection;
         SqlConnection conexion;
         string sConexion;
-        public frmempleados()
+        public frmempleados(string sConexion)
         {
             InitializeComponent();
-            sConexion = Conexion.conn();
+            this.sConexion = sConexion;
+            eMPLEADOTableAdapter2.Connection.ConnectionString = this.sConexion;
+            mUNICIPIOTableAdapter1.Connection.ConnectionString = this.sConexion;
+            rOLTableAdapter1.Connection.ConnectionString = this.sConexion;
         }
 
         private void frmempleados_Load(object sender, EventArgs e)

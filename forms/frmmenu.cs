@@ -13,9 +13,11 @@ namespace WindowsFormsApp2.forms
 {
     public partial class frmmenu : Form
     {
+        string sConexion;
         public frmmenu()
         {
             InitializeComponent();
+            this.sConexion = Conexion.conn();
         }
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -32,7 +34,7 @@ namespace WindowsFormsApp2.forms
 
         private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmempleados mostrar = new frmempleados();
+            frmempleados mostrar = new frmempleados(this.sConexion);
             mostrar.Show();
         }
 

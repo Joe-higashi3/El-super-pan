@@ -57,6 +57,8 @@
             this.btncancelar = new System.Windows.Forms.Button();
             this.txtbuscarcliente = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -95,6 +97,7 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(114, 30);
             this.txtCodigo.TabIndex = 61;
+            this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
             // 
             // btnbuscarproducto
             // 
@@ -290,11 +293,29 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(132, 11);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(303, 30);
+            this.textBox1.TabIndex = 85;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(23, 14);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(115, 25);
+            this.label7.TabIndex = 86;
+            this.label7.Text = "Empleado:";
+            // 
             // frmventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1047, 688);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.txtbuscarcliente);
             this.Controls.Add(this.btncancelar);
             this.Controls.Add(this.txtcancelar);
@@ -361,5 +382,7 @@
         private System.Windows.Forms.Button btncancelar;
         public System.Windows.Forms.TextBox txtbuscarcliente;
         private System.Windows.Forms.Timer timer1;
+        public System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label7;
     }
 }

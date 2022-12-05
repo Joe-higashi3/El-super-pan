@@ -14,10 +14,10 @@ namespace WindowsFormsApp2.clases
 
         public int iId_venta { get; set; }
         public int iId_empleado { get; set; }
+        public int iId_cliente { get; set; }
         public bool bTipo { get; set; }
         public DateTime dFecha { get; set; }
         public float fTotal { get; set; }
-        public int iId_cliente { get; set; }
         public int iId_producto { get; set; }
         public float fPrecio { get; set; }
         public int iCantidad { get; set; }

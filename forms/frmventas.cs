@@ -17,7 +17,7 @@ namespace WindowsFormsApp2.forms
     {
         clases.Conexion objconection;
         SqlConnection conexion;
-        string sConexion;
+        string sConexion, articulo;
         public frmventas()
         {
             InitializeComponent();
@@ -27,8 +27,8 @@ namespace WindowsFormsApp2.forms
         private void GuardarVenta()
         {
             clsventa venta = new clsventa();
-            venta.iId_cliente = Convert.ToInt32(.Text);
-            venta.iId_empleado = Convert.ToInt32(.Text);
+            venta.iId_cliente = Convert.ToInt32(txtbuscarcliente.Text);
+            venta.iId_empleado = Convert.ToInt32(txt.Text);
             if (venta.GuardarVenta() == true)
             {
                 MessageBox.Show("Sus Datos se guardaron correctamente");
@@ -76,7 +76,45 @@ namespace WindowsFormsApp2.forms
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+           
+        }
 
+        private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                // Conexxion , comando y leer son variables "X",les asigno los XXXconection
+                //XXXcomand y XXXdatareader
+               // objconection = new clases.Conexion();
+                conexion = new SqlConnection(clases.Conexion.conn());
+                // Se abre la conexion
+                conexion.Open();
+                // Defino una variable query tipo string
+                string lsql = "select * from grupos where Gr_clave=@Gr_clave";
+                //asigno a comando el sqlcommand 
+                SqlCommand comando = new SqlCommand(lsql, conexion);
+                // inicializo cualquier parametro definidoanteriormente
+                comando.Parameters.Clear();
+                //trensfiero el valor de txtusuario al parametro @us_login que puede ser
+                //cualquier variable, pero se recomienda usar el mismo nombre del campo
+                comando.Parameters.AddWithValue("@Gr_clave", txtCodigo.Text);
+                // Asigno a leer el sqldatareader para leer el registro
+                SqlDataReader leer = comando.ExecuteReader();
+                if (leer.Read())
+                {
+                    // lo encontro
+                    // paso del campo de la tabla a Variables
+                    articulo = leer["Gr_nombre"].ToString();
+                    txtCodigo.Text = articulo;
+                    // habilita txtclave y manda focus ahí                  
+                }
+                else
+                {
+                    //no lo encontro
+                    MessageBox.Show("Error: articulo no encontrado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    
+                }
+            }
         }
     }
 }
