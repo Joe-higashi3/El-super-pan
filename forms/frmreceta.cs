@@ -69,7 +69,7 @@ namespace WindowsFormsApp2.forms
             receta.fCantidad = float.Parse(txtcantidad.Text);
             receta.fCosto = float.Parse(txtcosto.Text);
 
-            if (receta.GuardarReceta() == true)
+            if (receta.AgregarInsumo() == true)
             {
                 txtinsumo.Clear();
                 txtcantidad.Clear();
@@ -77,7 +77,7 @@ namespace WindowsFormsApp2.forms
             }
             else
             {
-                MessageBox.Show("Hubo un problema con al eliminar el producto error: " + receta.error2);
+                MessageBox.Show("Hubo un problema al agregar el insumo, error: " + receta.error2);
 
             }
         }
@@ -90,7 +90,7 @@ namespace WindowsFormsApp2.forms
             receta.fCantidad = float.Parse(txtcantidad.Text);
             receta.fCosto = float.Parse(txtcosto.Text);
 
-            if (receta.GuardarReceta() == true)
+            if (receta.QuitarInsumo() == true)
             {
                 txtinsumo.Clear();
                 txtcantidad.Clear();
@@ -98,7 +98,7 @@ namespace WindowsFormsApp2.forms
             }
             else
             {
-                MessageBox.Show("Hubo un problema con al eliminar el producto error: " + receta.error3);
+                MessageBox.Show("Hubo un problema al tratar de eliminar el insumo, error: " + receta.error3);
 
             }
         }
@@ -151,8 +151,8 @@ namespace WindowsFormsApp2.forms
 
         private void btnBInsumo_Click(object sender, EventArgs e)
         {
-            frmbusquedainsumo mostrar = new frmbusquedainsumo();
-            mostrar.Show();
+            /*frmbusquedainsumo mostrar = new frmbusquedainsumo();
+            mostrar.Show();*/
         }
 
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
