@@ -33,12 +33,19 @@
             this.btnquitarinsumo = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtTotalCompra = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtPagaconCompra = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtCambioCompra = new System.Windows.Forms.TextBox();
             this.btnrealizarcompra = new System.Windows.Forms.Button();
             this.dgvVentas = new System.Windows.Forms.DataGridView();
+            this.midmovDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mid_id_insumo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mid_cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mid_precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mid_importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mfechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mtmidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.midprovDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mapidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mOVINVBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.panesitoDataSetmovinv = new WindowsFormsApp2.panesitoDataSetmovinv();
             this.dtpfechaCompra = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.txtDescripcionCompra = new System.Windows.Forms.TextBox();
@@ -54,18 +61,7 @@
             this.txttipomovimientoCompra = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtidmovimientoCompra = new System.Windows.Forms.TextBox();
-            this.mOVINVBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.panesitoDataSetmovinv = new WindowsFormsApp2.panesitoDataSetmovinv();
             this.mOV_INVTableAdapter = new WindowsFormsApp2.panesitoDataSetmovinvTableAdapters.MOV_INVTableAdapter();
-            this.midmovDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mid_id_insumo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mid_cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mid_precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mid_importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mfechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mtmidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.midprovDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mapidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mOVINVBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panesitoDataSetmovinv)).BeginInit();
@@ -92,7 +88,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(522, 306);
+            this.label6.Location = new System.Drawing.Point(613, 306);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(34, 13);
             this.label6.TabIndex = 87;
@@ -100,47 +96,15 @@
             // 
             // txtTotalCompra
             // 
-            this.txtTotalCompra.Location = new System.Drawing.Point(562, 303);
+            this.txtTotalCompra.Location = new System.Drawing.Point(656, 303);
             this.txtTotalCompra.Name = "txtTotalCompra";
             this.txtTotalCompra.Size = new System.Drawing.Size(114, 20);
             this.txtTotalCompra.TabIndex = 86;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(500, 339);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 13);
-            this.label5.TabIndex = 85;
-            this.label5.Text = "Paga con:";
-            // 
-            // txtPagaconCompra
-            // 
-            this.txtPagaconCompra.Location = new System.Drawing.Point(562, 336);
-            this.txtPagaconCompra.Name = "txtPagaconCompra";
-            this.txtPagaconCompra.Size = new System.Drawing.Size(114, 20);
-            this.txtPagaconCompra.TabIndex = 84;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(511, 375);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 13);
-            this.label3.TabIndex = 83;
-            this.label3.Text = "Cambio:";
-            // 
-            // txtCambioCompra
-            // 
-            this.txtCambioCompra.Location = new System.Drawing.Point(562, 372);
-            this.txtCambioCompra.Name = "txtCambioCompra";
-            this.txtCambioCompra.Size = new System.Drawing.Size(114, 20);
-            this.txtCambioCompra.TabIndex = 82;
-            // 
             // btnrealizarcompra
             // 
             this.btnrealizarcompra.Enabled = false;
-            this.btnrealizarcompra.Location = new System.Drawing.Point(721, 326);
+            this.btnrealizarcompra.Location = new System.Drawing.Point(616, 340);
             this.btnrealizarcompra.Name = "btnrealizarcompra";
             this.btnrealizarcompra.Size = new System.Drawing.Size(190, 39);
             this.btnrealizarcompra.TabIndex = 88;
@@ -170,6 +134,71 @@
             this.dgvVentas.Size = new System.Drawing.Size(506, 384);
             this.dgvVentas.TabIndex = 89;
             this.dgvVentas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVentas_CellContentClick);
+            // 
+            // midmovDataGridViewTextBoxColumn
+            // 
+            this.midmovDataGridViewTextBoxColumn.DataPropertyName = "m_id_mov";
+            this.midmovDataGridViewTextBoxColumn.HeaderText = "ID Movimiento";
+            this.midmovDataGridViewTextBoxColumn.Name = "midmovDataGridViewTextBoxColumn";
+            // 
+            // mid_id_insumo
+            // 
+            this.mid_id_insumo.DataPropertyName = "mid_id_insumo";
+            this.mid_id_insumo.HeaderText = "mid_id_insumo";
+            this.mid_id_insumo.Name = "mid_id_insumo";
+            // 
+            // mid_cantidad
+            // 
+            this.mid_cantidad.DataPropertyName = "mid_cantidad";
+            this.mid_cantidad.HeaderText = "mid_cantidad";
+            this.mid_cantidad.Name = "mid_cantidad";
+            // 
+            // mid_precio
+            // 
+            this.mid_precio.DataPropertyName = "mid_precio";
+            this.mid_precio.HeaderText = "mid_precio";
+            this.mid_precio.Name = "mid_precio";
+            // 
+            // mid_importe
+            // 
+            this.mid_importe.DataPropertyName = "mid_importe";
+            this.mid_importe.HeaderText = "mid_importe";
+            this.mid_importe.Name = "mid_importe";
+            this.mid_importe.ReadOnly = true;
+            // 
+            // mfechaDataGridViewTextBoxColumn
+            // 
+            this.mfechaDataGridViewTextBoxColumn.DataPropertyName = "m_fecha";
+            this.mfechaDataGridViewTextBoxColumn.HeaderText = "Fecha";
+            this.mfechaDataGridViewTextBoxColumn.Name = "mfechaDataGridViewTextBoxColumn";
+            // 
+            // mtmidDataGridViewTextBoxColumn
+            // 
+            this.mtmidDataGridViewTextBoxColumn.DataPropertyName = "m_tm_id";
+            this.mtmidDataGridViewTextBoxColumn.HeaderText = "Tipo Movimiento";
+            this.mtmidDataGridViewTextBoxColumn.Name = "mtmidDataGridViewTextBoxColumn";
+            // 
+            // midprovDataGridViewTextBoxColumn
+            // 
+            this.midprovDataGridViewTextBoxColumn.DataPropertyName = "m_id_prov";
+            this.midprovDataGridViewTextBoxColumn.HeaderText = "ID Proveedor";
+            this.midprovDataGridViewTextBoxColumn.Name = "midprovDataGridViewTextBoxColumn";
+            // 
+            // mapidDataGridViewTextBoxColumn
+            // 
+            this.mapidDataGridViewTextBoxColumn.DataPropertyName = "m_ap_id";
+            this.mapidDataGridViewTextBoxColumn.HeaderText = "Almacen";
+            this.mapidDataGridViewTextBoxColumn.Name = "mapidDataGridViewTextBoxColumn";
+            // 
+            // mOVINVBindingSource
+            // 
+            this.mOVINVBindingSource.DataMember = "MOV_INV";
+            this.mOVINVBindingSource.DataSource = this.panesitoDataSetmovinv;
+            // 
+            // panesitoDataSetmovinv
+            // 
+            this.panesitoDataSetmovinv.DataSetName = "panesitoDataSetmovinv";
+            this.panesitoDataSetmovinv.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dtpfechaCompra
             // 
@@ -292,74 +321,9 @@
             this.txtidmovimientoCompra.Size = new System.Drawing.Size(114, 20);
             this.txtidmovimientoCompra.TabIndex = 105;
             // 
-            // mOVINVBindingSource
-            // 
-            this.mOVINVBindingSource.DataMember = "MOV_INV";
-            this.mOVINVBindingSource.DataSource = this.panesitoDataSetmovinv;
-            // 
-            // panesitoDataSetmovinv
-            // 
-            this.panesitoDataSetmovinv.DataSetName = "panesitoDataSetmovinv";
-            this.panesitoDataSetmovinv.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // mOV_INVTableAdapter
             // 
             this.mOV_INVTableAdapter.ClearBeforeFill = true;
-            // 
-            // midmovDataGridViewTextBoxColumn
-            // 
-            this.midmovDataGridViewTextBoxColumn.DataPropertyName = "m_id_mov";
-            this.midmovDataGridViewTextBoxColumn.HeaderText = "ID Movimiento";
-            this.midmovDataGridViewTextBoxColumn.Name = "midmovDataGridViewTextBoxColumn";
-            // 
-            // mid_id_insumo
-            // 
-            this.mid_id_insumo.DataPropertyName = "mid_id_insumo";
-            this.mid_id_insumo.HeaderText = "mid_id_insumo";
-            this.mid_id_insumo.Name = "mid_id_insumo";
-            // 
-            // mid_cantidad
-            // 
-            this.mid_cantidad.DataPropertyName = "mid_cantidad";
-            this.mid_cantidad.HeaderText = "mid_cantidad";
-            this.mid_cantidad.Name = "mid_cantidad";
-            // 
-            // mid_precio
-            // 
-            this.mid_precio.DataPropertyName = "mid_precio";
-            this.mid_precio.HeaderText = "mid_precio";
-            this.mid_precio.Name = "mid_precio";
-            // 
-            // mid_importe
-            // 
-            this.mid_importe.DataPropertyName = "mid_importe";
-            this.mid_importe.HeaderText = "mid_importe";
-            this.mid_importe.Name = "mid_importe";
-            this.mid_importe.ReadOnly = true;
-            // 
-            // mfechaDataGridViewTextBoxColumn
-            // 
-            this.mfechaDataGridViewTextBoxColumn.DataPropertyName = "m_fecha";
-            this.mfechaDataGridViewTextBoxColumn.HeaderText = "Fecha";
-            this.mfechaDataGridViewTextBoxColumn.Name = "mfechaDataGridViewTextBoxColumn";
-            // 
-            // mtmidDataGridViewTextBoxColumn
-            // 
-            this.mtmidDataGridViewTextBoxColumn.DataPropertyName = "m_tm_id";
-            this.mtmidDataGridViewTextBoxColumn.HeaderText = "Tipo Movimiento";
-            this.mtmidDataGridViewTextBoxColumn.Name = "mtmidDataGridViewTextBoxColumn";
-            // 
-            // midprovDataGridViewTextBoxColumn
-            // 
-            this.midprovDataGridViewTextBoxColumn.DataPropertyName = "m_id_prov";
-            this.midprovDataGridViewTextBoxColumn.HeaderText = "ID Proveedor";
-            this.midprovDataGridViewTextBoxColumn.Name = "midprovDataGridViewTextBoxColumn";
-            // 
-            // mapidDataGridViewTextBoxColumn
-            // 
-            this.mapidDataGridViewTextBoxColumn.DataPropertyName = "m_ap_id";
-            this.mapidDataGridViewTextBoxColumn.HeaderText = "Almacen";
-            this.mapidDataGridViewTextBoxColumn.Name = "mapidDataGridViewTextBoxColumn";
             // 
             // frmcompra
             // 
@@ -386,10 +350,6 @@
             this.Controls.Add(this.btnrealizarcompra);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtTotalCompra);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtPagaconCompra);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtCambioCompra);
             this.Controls.Add(this.btnbuscarinsumo);
             this.Controls.Add(this.btnquitarinsumo);
             this.Name = "frmcompra";
@@ -409,10 +369,6 @@
         private System.Windows.Forms.Button btnquitarinsumo;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtTotalCompra;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtPagaconCompra;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtCambioCompra;
         private System.Windows.Forms.Button btnrealizarcompra;
         private System.Windows.Forms.DataGridView dgvVentas;
         private System.Windows.Forms.DateTimePicker dtpfechaCompra;

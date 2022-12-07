@@ -78,23 +78,19 @@ namespace WindowsFormsApp2.forms
 
         private void dgvVentas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            //x2 la fecha donde chuchas va
             txtidmovimientoCompra.Text = this.panesitoDataSetmovinv.MOV_INV[mOVINVBindingSource.Position].m_id_mov.ToString();
-            txttipomovimientoCompra.Text = this.panesitoDataSetmovinv.MOV_INV[mOVINVBindingSource.Position].m_tm_id.ToString();
             txtidproveedorCompra.Text = this.panesitoDataSetmovinv.MOV_INV[mOVINVBindingSource.Position].m_id_prov.ToString();
-
+            txttipomovimientoCompra.Text = this.panesitoDataSetmovinv.MOV_INV[mOVINVBindingSource.Position].m_tm_id.ToString();
             txtCodigoInsumoCompra.Text = this.panesitoDataSetmovinv.MOV_INV[mOVINVBindingSource.Position].m_ap_id.ToString();
-            txtCantidadCompra.Text = this.panesitoDataSetmovinv.MOV_INV[mOVINVBindingSource.Position]
-
-//            txtTotalCompra.Text = this.panesitoDataSetmovinv.MOV_INV[mOVINVBindingSource.Position]
+            //descripcion del insumo va o no va aqui es la incognita
+            txtPrecioCompra.Text = this.panesitoDataSetmovinv.MOV_INV[mOVINVBindingSource.Position].mid_precio.ToString();
+            txtCantidadCompra.Text = this.panesitoDataSetmovinv.MOV_INV[mOVINVBindingSource.Position].mid_cantidad.ToString();
+            txtTotalCompra.Text = this.panesitoDataSetmovinv.MOV_INV[mOVINVBindingSource.Position].mid_importe.ToString();
 
         }
-
         /*       
             //compra.iId_almacen = Convert.ToInt32();
-            (txtCantidadCompra.Text);
-            compra.fPrecio = float.Parse(txtPrecioCompra.Text);
-            //compra.fImporte = float.Parse(txtTotalCompra.Text);
         */
-
     }
 }
