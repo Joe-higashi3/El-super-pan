@@ -35,15 +35,6 @@
             this.txtTotalCompra = new System.Windows.Forms.TextBox();
             this.btnrealizarcompra = new System.Windows.Forms.Button();
             this.dgvVentas = new System.Windows.Forms.DataGridView();
-            this.midmovDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mid_id_insumo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mid_cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mid_precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mid_importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mfechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mtmidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.midprovDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mapidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mOVINVBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panesitoDataSetmovinv = new WindowsFormsApp2.panesitoDataSetmovinv();
             this.dtpfechaCompra = new System.Windows.Forms.DateTimePicker();
@@ -62,6 +53,13 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtidmovimientoCompra = new System.Windows.Forms.TextBox();
             this.mOV_INVTableAdapter = new WindowsFormsApp2.panesitoDataSetmovinvTableAdapters.MOV_INVTableAdapter();
+            this.mid_id_insumo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mid_cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mid_precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mid_importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mfechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.midprovDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mapidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mOVINVBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panesitoDataSetmovinv)).BeginInit();
@@ -69,7 +67,7 @@
             // 
             // btnbuscarinsumo
             // 
-            this.btnbuscarinsumo.Location = new System.Drawing.Point(505, 243);
+            this.btnbuscarinsumo.Location = new System.Drawing.Point(208, 136);
             this.btnbuscarinsumo.Name = "btnbuscarinsumo";
             this.btnbuscarinsumo.Size = new System.Drawing.Size(190, 39);
             this.btnbuscarinsumo.TabIndex = 71;
@@ -78,7 +76,7 @@
             // 
             // btnquitarinsumo
             // 
-            this.btnquitarinsumo.Location = new System.Drawing.Point(721, 243);
+            this.btnquitarinsumo.Location = new System.Drawing.Point(454, 136);
             this.btnquitarinsumo.Name = "btnquitarinsumo";
             this.btnquitarinsumo.Size = new System.Drawing.Size(192, 39);
             this.btnquitarinsumo.TabIndex = 70;
@@ -88,7 +86,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(613, 306);
+            this.label6.Location = new System.Drawing.Point(446, 106);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(34, 13);
             this.label6.TabIndex = 87;
@@ -96,7 +94,7 @@
             // 
             // txtTotalCompra
             // 
-            this.txtTotalCompra.Location = new System.Drawing.Point(656, 303);
+            this.txtTotalCompra.Location = new System.Drawing.Point(486, 103);
             this.txtTotalCompra.Name = "txtTotalCompra";
             this.txtTotalCompra.Size = new System.Drawing.Size(114, 20);
             this.txtTotalCompra.TabIndex = 86;
@@ -104,7 +102,7 @@
             // btnrealizarcompra
             // 
             this.btnrealizarcompra.Enabled = false;
-            this.btnrealizarcompra.Location = new System.Drawing.Point(616, 340);
+            this.btnrealizarcompra.Location = new System.Drawing.Point(708, 136);
             this.btnrealizarcompra.Name = "btnrealizarcompra";
             this.btnrealizarcompra.Size = new System.Drawing.Size(190, 39);
             this.btnrealizarcompra.TabIndex = 88;
@@ -117,29 +115,156 @@
             this.dgvVentas.AutoGenerateColumns = false;
             this.dgvVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVentas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.midmovDataGridViewTextBoxColumn,
             this.mid_id_insumo,
             this.mid_cantidad,
             this.mid_precio,
             this.mid_importe,
             this.mfechaDataGridViewTextBoxColumn,
-            this.mtmidDataGridViewTextBoxColumn,
             this.midprovDataGridViewTextBoxColumn,
             this.mapidDataGridViewTextBoxColumn});
             this.dgvVentas.DataSource = this.mOVINVBindingSource;
-            this.dgvVentas.Location = new System.Drawing.Point(-3, 52);
+            this.dgvVentas.Location = new System.Drawing.Point(25, 183);
             this.dgvVentas.Margin = new System.Windows.Forms.Padding(5);
             this.dgvVentas.Name = "dgvVentas";
             this.dgvVentas.RowTemplate.Height = 24;
-            this.dgvVentas.Size = new System.Drawing.Size(506, 384);
+            this.dgvVentas.Size = new System.Drawing.Size(888, 266);
             this.dgvVentas.TabIndex = 89;
             this.dgvVentas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVentas_CellContentClick);
             // 
-            // midmovDataGridViewTextBoxColumn
+            // mOVINVBindingSource
             // 
-            this.midmovDataGridViewTextBoxColumn.DataPropertyName = "m_id_mov";
-            this.midmovDataGridViewTextBoxColumn.HeaderText = "ID Movimiento";
-            this.midmovDataGridViewTextBoxColumn.Name = "midmovDataGridViewTextBoxColumn";
+            this.mOVINVBindingSource.DataMember = "MOV_INV";
+            this.mOVINVBindingSource.DataSource = this.panesitoDataSetmovinv;
+            // 
+            // panesitoDataSetmovinv
+            // 
+            this.panesitoDataSetmovinv.DataSetName = "panesitoDataSetmovinv";
+            this.panesitoDataSetmovinv.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dtpfechaCompra
+            // 
+            this.dtpfechaCompra.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpfechaCompra.Location = new System.Drawing.Point(757, 12);
+            this.dtpfechaCompra.Name = "dtpfechaCompra";
+            this.dtpfechaCompra.Size = new System.Drawing.Size(156, 20);
+            this.dtpfechaCompra.TabIndex = 92;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(352, 72);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(66, 13);
+            this.label4.TabIndex = 98;
+            this.label4.Text = "Descripcion:";
+            // 
+            // txtDescripcionCompra
+            // 
+            this.txtDescripcionCompra.Location = new System.Drawing.Point(424, 69);
+            this.txtDescripcionCompra.Name = "txtDescripcionCompra";
+            this.txtDescripcionCompra.Size = new System.Drawing.Size(286, 20);
+            this.txtDescripcionCompra.TabIndex = 97;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(736, 72);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.TabIndex = 96;
+            this.label2.Text = "Cantidad:";
+            // 
+            // txtCantidadCompra
+            // 
+            this.txtCantidadCompra.Location = new System.Drawing.Point(794, 69);
+            this.txtCantidadCompra.Name = "txtCantidadCompra";
+            this.txtCantidadCompra.Size = new System.Drawing.Size(85, 20);
+            this.txtCantidadCompra.TabIndex = 95;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(22, 72);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 13);
+            this.label1.TabIndex = 94;
+            this.label1.Text = "Id Insumo:";
+            // 
+            // txtCodigoInsumoCompra
+            // 
+            this.txtCodigoInsumoCompra.Location = new System.Drawing.Point(84, 65);
+            this.txtCodigoInsumoCompra.Name = "txtCodigoInsumoCompra";
+            this.txtCodigoInsumoCompra.Size = new System.Drawing.Size(114, 20);
+            this.txtCodigoInsumoCompra.TabIndex = 93;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(205, 72);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(40, 13);
+            this.label7.TabIndex = 100;
+            this.label7.Text = "Precio:";
+            // 
+            // txtPrecioCompra
+            // 
+            this.txtPrecioCompra.Location = new System.Drawing.Point(251, 69);
+            this.txtPrecioCompra.Name = "txtPrecioCompra";
+            this.txtPrecioCompra.Size = new System.Drawing.Size(85, 20);
+            this.txtPrecioCompra.TabIndex = 99;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(205, 28);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(74, 13);
+            this.label8.TabIndex = 102;
+            this.label8.Text = "Id_Proveedor:";
+            // 
+            // txtidproveedorCompra
+            // 
+            this.txtidproveedorCompra.Location = new System.Drawing.Point(285, 25);
+            this.txtidproveedorCompra.Name = "txtidproveedorCompra";
+            this.txtidproveedorCompra.Size = new System.Drawing.Size(85, 20);
+            this.txtidproveedorCompra.TabIndex = 101;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(389, 28);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(91, 13);
+            this.label9.TabIndex = 104;
+            this.label9.Text = "Tipo_Movimiento:";
+            // 
+            // txttipomovimientoCompra
+            // 
+            this.txttipomovimientoCompra.Enabled = false;
+            this.txttipomovimientoCompra.Location = new System.Drawing.Point(486, 28);
+            this.txttipomovimientoCompra.Name = "txttipomovimientoCompra";
+            this.txttipomovimientoCompra.Size = new System.Drawing.Size(114, 20);
+            this.txttipomovimientoCompra.TabIndex = 103;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(20, 28);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(58, 13);
+            this.label10.TabIndex = 106;
+            this.label10.Text = "Id Compra:";
+            // 
+            // txtidmovimientoCompra
+            // 
+            this.txtidmovimientoCompra.Location = new System.Drawing.Point(84, 25);
+            this.txtidmovimientoCompra.Name = "txtidmovimientoCompra";
+            this.txtidmovimientoCompra.Size = new System.Drawing.Size(114, 20);
+            this.txtidmovimientoCompra.TabIndex = 105;
+            // 
+            // mOV_INVTableAdapter
+            // 
+            this.mOV_INVTableAdapter.ClearBeforeFill = true;
             // 
             // mid_id_insumo
             // 
@@ -172,12 +297,6 @@
             this.mfechaDataGridViewTextBoxColumn.HeaderText = "Fecha";
             this.mfechaDataGridViewTextBoxColumn.Name = "mfechaDataGridViewTextBoxColumn";
             // 
-            // mtmidDataGridViewTextBoxColumn
-            // 
-            this.mtmidDataGridViewTextBoxColumn.DataPropertyName = "m_tm_id";
-            this.mtmidDataGridViewTextBoxColumn.HeaderText = "Tipo Movimiento";
-            this.mtmidDataGridViewTextBoxColumn.Name = "mtmidDataGridViewTextBoxColumn";
-            // 
             // midprovDataGridViewTextBoxColumn
             // 
             this.midprovDataGridViewTextBoxColumn.DataPropertyName = "m_id_prov";
@@ -189,141 +308,6 @@
             this.mapidDataGridViewTextBoxColumn.DataPropertyName = "m_ap_id";
             this.mapidDataGridViewTextBoxColumn.HeaderText = "Almacen";
             this.mapidDataGridViewTextBoxColumn.Name = "mapidDataGridViewTextBoxColumn";
-            // 
-            // mOVINVBindingSource
-            // 
-            this.mOVINVBindingSource.DataMember = "MOV_INV";
-            this.mOVINVBindingSource.DataSource = this.panesitoDataSetmovinv;
-            // 
-            // panesitoDataSetmovinv
-            // 
-            this.panesitoDataSetmovinv.DataSetName = "panesitoDataSetmovinv";
-            this.panesitoDataSetmovinv.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dtpfechaCompra
-            // 
-            this.dtpfechaCompra.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpfechaCompra.Location = new System.Drawing.Point(757, 12);
-            this.dtpfechaCompra.Name = "dtpfechaCompra";
-            this.dtpfechaCompra.Size = new System.Drawing.Size(156, 20);
-            this.dtpfechaCompra.TabIndex = 92;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(503, 179);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 13);
-            this.label4.TabIndex = 98;
-            this.label4.Text = "Descripcion:";
-            // 
-            // txtDescripcionCompra
-            // 
-            this.txtDescripcionCompra.Location = new System.Drawing.Point(575, 176);
-            this.txtDescripcionCompra.Name = "txtDescripcionCompra";
-            this.txtDescripcionCompra.Size = new System.Drawing.Size(286, 20);
-            this.txtDescripcionCompra.TabIndex = 97;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(718, 211);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
-            this.label2.TabIndex = 96;
-            this.label2.Text = "Cantidad:";
-            // 
-            // txtCantidadCompra
-            // 
-            this.txtCantidadCompra.Location = new System.Drawing.Point(776, 208);
-            this.txtCantidadCompra.Name = "txtCantidadCompra";
-            this.txtCantidadCompra.Size = new System.Drawing.Size(85, 20);
-            this.txtCantidadCompra.TabIndex = 95;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(513, 147);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 13);
-            this.label1.TabIndex = 94;
-            this.label1.Text = "Id Insumo:";
-            // 
-            // txtCodigoInsumoCompra
-            // 
-            this.txtCodigoInsumoCompra.Location = new System.Drawing.Point(575, 144);
-            this.txtCodigoInsumoCompra.Name = "txtCodigoInsumoCompra";
-            this.txtCodigoInsumoCompra.Size = new System.Drawing.Size(114, 20);
-            this.txtCodigoInsumoCompra.TabIndex = 93;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(718, 147);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(40, 13);
-            this.label7.TabIndex = 100;
-            this.label7.Text = "Precio:";
-            // 
-            // txtPrecioCompra
-            // 
-            this.txtPrecioCompra.Location = new System.Drawing.Point(776, 144);
-            this.txtPrecioCompra.Name = "txtPrecioCompra";
-            this.txtPrecioCompra.Size = new System.Drawing.Size(85, 20);
-            this.txtPrecioCompra.TabIndex = 99;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(696, 68);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(74, 13);
-            this.label8.TabIndex = 102;
-            this.label8.Text = "Id_Proveedor:";
-            // 
-            // txtidproveedorCompra
-            // 
-            this.txtidproveedorCompra.Location = new System.Drawing.Point(776, 65);
-            this.txtidproveedorCompra.Name = "txtidproveedorCompra";
-            this.txtidproveedorCompra.Size = new System.Drawing.Size(85, 20);
-            this.txtidproveedorCompra.TabIndex = 101;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(559, 102);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(91, 13);
-            this.label9.TabIndex = 104;
-            this.label9.Text = "Tipo_Movimiento:";
-            // 
-            // txttipomovimientoCompra
-            // 
-            this.txttipomovimientoCompra.Enabled = false;
-            this.txttipomovimientoCompra.Location = new System.Drawing.Point(656, 99);
-            this.txttipomovimientoCompra.Name = "txttipomovimientoCompra";
-            this.txttipomovimientoCompra.Size = new System.Drawing.Size(114, 20);
-            this.txttipomovimientoCompra.TabIndex = 103;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(511, 68);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(58, 13);
-            this.label10.TabIndex = 106;
-            this.label10.Text = "Id Compra:";
-            // 
-            // txtidmovimientoCompra
-            // 
-            this.txtidmovimientoCompra.Location = new System.Drawing.Point(575, 65);
-            this.txtidmovimientoCompra.Name = "txtidmovimientoCompra";
-            this.txtidmovimientoCompra.Size = new System.Drawing.Size(114, 20);
-            this.txtidmovimientoCompra.TabIndex = 105;
-            // 
-            // mOV_INVTableAdapter
-            // 
-            this.mOV_INVTableAdapter.ClearBeforeFill = true;
             // 
             // frmcompra
             // 
@@ -389,13 +373,11 @@
         private panesitoDataSetmovinv panesitoDataSetmovinv;
         private System.Windows.Forms.BindingSource mOVINVBindingSource;
         private panesitoDataSetmovinvTableAdapters.MOV_INVTableAdapter mOV_INVTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn midmovDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn mid_id_insumo;
         private System.Windows.Forms.DataGridViewTextBoxColumn mid_cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn mid_precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn mid_importe;
         private System.Windows.Forms.DataGridViewTextBoxColumn mfechaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mtmidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn midprovDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn mapidDataGridViewTextBoxColumn;
     }
