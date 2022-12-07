@@ -48,6 +48,51 @@ namespace WindowsFormsApp2.forms
 
         }
 
+
+        private void QuitarInsumo()
+        {
+            clscompra compra = new clscompra();
+            compra.iId_movimiento = Convert.ToInt32(txtidmovimientoCompra.Text);
+            compra.iId_tipo_movimiento = Convert.ToInt32(txttipomovimientoCompra.Text);
+            compra.iId_proveedor = Convert.ToInt32(txtidproveedorCompra.Text);
+            //compra.iId_almacen = Convert.ToInt32();
+            compra.iId_insumo = Convert.ToInt32(txtCodigoInsumoCompra.Text);
+            compra.iCantidad = Convert.ToInt32(txtCantidadCompra.Text);
+            compra.fPrecio = float.Parse(txtPrecioCompra.Text);
+            compra.fImporte = float.Parse(txtTotalCompra.Text);
+
+            if (compra.QuitarInsumo() == true)
+            {
+                MessageBox.Show("Insumo eliminado correctamente");
+            }
+            else
+            {
+                MessageBox.Show("Sus insumos no se pudieron quitar error: " + compra.error);
+
+            }
+
+        }
+
+
+        private void consecutivo()
+        {
+            SqlConnection conn = new SqlConnection(sConexion);
+            SqlCommand cmd = new SqlCommand("", conn);
+            SqlDataReader l;
+
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT MAX(m_id_mov) AS correspondiente FROM MOV_INV";
+
+
+            conn.Open();
+            l = cmd.ExecuteReader();
+            if (l.Read())
+            {
+                txtidmovimientoCompra.Text = Convert.ToString(l.GetInt32(0));
+            }
+
+        }
+
         private void limpiar()
         {
             txtidmovimientoCompra.Clear();
@@ -63,6 +108,8 @@ namespace WindowsFormsApp2.forms
         }
 
 
+
+
         private void frmcompra_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'panesitoDataSetmovinv.MOV_INV' Puede moverla o quitarla según sea necesario.
@@ -70,11 +117,6 @@ namespace WindowsFormsApp2.forms
 
         }
 
-        private void btnrealizarcompra_Click(object sender, EventArgs e)
-        {
-            GuardarCompra();
-            limpiar();
-        }
 
         private void dgvVentas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -89,8 +131,24 @@ namespace WindowsFormsApp2.forms
             txtTotalCompra.Text = this.panesitoDataSetmovinv.MOV_INV[mOVINVBindingSource.Position].mid_importe.ToString();
 
         }
+
+        private void btnquitarinsumo_Click(object sender, EventArgs e)
+        {
+            QuitarInsumo();
+            limpiar();
+        }
+
+        private void btnagregarinsumo_Click(object sender, EventArgs e)
+        {
+            GuardarCompra();
+            limpiar();
+            if(txtidmovimientoCompra.Text == null)
+            {
+                consecutivo();
+            }
+        }
         /*       
-            //compra.iId_almacen = Convert.ToInt32();
-        */
+//compra.iId_almacen = Convert.ToInt32();
+*/
     }
 }

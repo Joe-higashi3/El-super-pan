@@ -33,7 +33,7 @@
             this.btnquitarinsumo = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtTotalCompra = new System.Windows.Forms.TextBox();
-            this.btnrealizarcompra = new System.Windows.Forms.Button();
+            this.btnagregarinsumo = new System.Windows.Forms.Button();
             this.dgvVentas = new System.Windows.Forms.DataGridView();
             this.mOVINVBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panesitoDataSetmovinv = new WindowsFormsApp2.panesitoDataSetmovinv();
@@ -57,9 +57,6 @@
             this.mid_cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mid_precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mid_importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mfechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.midprovDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mapidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mOVINVBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panesitoDataSetmovinv)).BeginInit();
@@ -82,6 +79,7 @@
             this.btnquitarinsumo.TabIndex = 70;
             this.btnquitarinsumo.Text = "Quitar insumo";
             this.btnquitarinsumo.UseVisualStyleBackColor = true;
+            this.btnquitarinsumo.Click += new System.EventHandler(this.btnquitarinsumo_Click);
             // 
             // label6
             // 
@@ -99,30 +97,25 @@
             this.txtTotalCompra.Size = new System.Drawing.Size(114, 20);
             this.txtTotalCompra.TabIndex = 86;
             // 
-            // btnrealizarcompra
+            // btnagregarinsumo
             // 
-            this.btnrealizarcompra.Enabled = false;
-            this.btnrealizarcompra.Location = new System.Drawing.Point(708, 136);
-            this.btnrealizarcompra.Name = "btnrealizarcompra";
-            this.btnrealizarcompra.Size = new System.Drawing.Size(190, 39);
-            this.btnrealizarcompra.TabIndex = 88;
-            this.btnrealizarcompra.Text = "Realizar Compra";
-            this.btnrealizarcompra.UseVisualStyleBackColor = true;
-            this.btnrealizarcompra.Click += new System.EventHandler(this.btnrealizarcompra_Click);
+            this.btnagregarinsumo.Enabled = false;
+            this.btnagregarinsumo.Location = new System.Drawing.Point(708, 136);
+            this.btnagregarinsumo.Name = "btnagregarinsumo";
+            this.btnagregarinsumo.Size = new System.Drawing.Size(190, 39);
+            this.btnagregarinsumo.TabIndex = 88;
+            this.btnagregarinsumo.Text = "Agregar Insumo";
+            this.btnagregarinsumo.UseVisualStyleBackColor = true;
+            this.btnagregarinsumo.Click += new System.EventHandler(this.btnagregarinsumo_Click);
             // 
             // dgvVentas
             // 
-            this.dgvVentas.AutoGenerateColumns = false;
             this.dgvVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVentas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.mid_id_insumo,
             this.mid_cantidad,
             this.mid_precio,
-            this.mid_importe,
-            this.mfechaDataGridViewTextBoxColumn,
-            this.midprovDataGridViewTextBoxColumn,
-            this.mapidDataGridViewTextBoxColumn});
-            this.dgvVentas.DataSource = this.mOVINVBindingSource;
+            this.mid_importe});
             this.dgvVentas.Location = new System.Drawing.Point(25, 183);
             this.dgvVentas.Margin = new System.Windows.Forms.Padding(5);
             this.dgvVentas.Name = "dgvVentas";
@@ -192,7 +185,7 @@
             // 
             // txtCodigoInsumoCompra
             // 
-            this.txtCodigoInsumoCompra.Location = new System.Drawing.Point(84, 65);
+            this.txtCodigoInsumoCompra.Location = new System.Drawing.Point(84, 69);
             this.txtCodigoInsumoCompra.Name = "txtCodigoInsumoCompra";
             this.txtCodigoInsumoCompra.Size = new System.Drawing.Size(114, 20);
             this.txtCodigoInsumoCompra.TabIndex = 93;
@@ -291,24 +284,6 @@
             this.mid_importe.Name = "mid_importe";
             this.mid_importe.ReadOnly = true;
             // 
-            // mfechaDataGridViewTextBoxColumn
-            // 
-            this.mfechaDataGridViewTextBoxColumn.DataPropertyName = "m_fecha";
-            this.mfechaDataGridViewTextBoxColumn.HeaderText = "Fecha";
-            this.mfechaDataGridViewTextBoxColumn.Name = "mfechaDataGridViewTextBoxColumn";
-            // 
-            // midprovDataGridViewTextBoxColumn
-            // 
-            this.midprovDataGridViewTextBoxColumn.DataPropertyName = "m_id_prov";
-            this.midprovDataGridViewTextBoxColumn.HeaderText = "ID Proveedor";
-            this.midprovDataGridViewTextBoxColumn.Name = "midprovDataGridViewTextBoxColumn";
-            // 
-            // mapidDataGridViewTextBoxColumn
-            // 
-            this.mapidDataGridViewTextBoxColumn.DataPropertyName = "m_ap_id";
-            this.mapidDataGridViewTextBoxColumn.HeaderText = "Almacen";
-            this.mapidDataGridViewTextBoxColumn.Name = "mapidDataGridViewTextBoxColumn";
-            // 
             // frmcompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -331,7 +306,7 @@
             this.Controls.Add(this.txtCodigoInsumoCompra);
             this.Controls.Add(this.dtpfechaCompra);
             this.Controls.Add(this.dgvVentas);
-            this.Controls.Add(this.btnrealizarcompra);
+            this.Controls.Add(this.btnagregarinsumo);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtTotalCompra);
             this.Controls.Add(this.btnbuscarinsumo);
@@ -353,7 +328,7 @@
         private System.Windows.Forms.Button btnquitarinsumo;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtTotalCompra;
-        private System.Windows.Forms.Button btnrealizarcompra;
+        private System.Windows.Forms.Button btnagregarinsumo;
         private System.Windows.Forms.DataGridView dgvVentas;
         private System.Windows.Forms.DateTimePicker dtpfechaCompra;
         private System.Windows.Forms.Label label4;
@@ -377,8 +352,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn mid_cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn mid_precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn mid_importe;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mfechaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn midprovDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mapidDataGridViewTextBoxColumn;
     }
 }
