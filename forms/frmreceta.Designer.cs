@@ -38,34 +38,40 @@
             this.eSTADOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eSTADOTableAdapter = new WindowsFormsApp2.gruposDataSetTableAdapters.ESTADOTableAdapter();
             this.gRUPOTableAdapter = new WindowsFormsApp2.gruposDataSet2TableAdapters.GRUPOTableAdapter();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cmbxstatus = new System.Windows.Forms.ComboBox();
-            this.cbxgrupo = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtid_receta = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.rdidrecetaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rdidinsumoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rdcantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rdcostoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rECETABindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.pRECETA1 = new WindowsFormsApp2.PRECETA1();
+            this.rECETABindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.rECETAP = new WindowsFormsApp2.RECETAP();
             this.rECETADETALLEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.recetaDetalle = new WindowsFormsApp2.RecetaDetalle();
             this.btnguardar = new System.Windows.Forms.Button();
             this.btnnuevo = new System.Windows.Forms.Button();
-            this.txt_nombre = new WindowsFormsApp2.Utilerias.Validacion();
-            this.txtinsumo = new WindowsFormsApp2.Utilerias.Validacion();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtcantidad = new WindowsFormsApp2.Utilerias.Validacion();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtcosto = new WindowsFormsApp2.Utilerias.Validacion();
             this.label7 = new System.Windows.Forms.Label();
             this.btnBInsumo = new System.Windows.Forms.Button();
-            this.txtIdInsumo = new WindowsFormsApp2.Utilerias.Validacion();
             this.label8 = new System.Windows.Forms.Label();
             this.btnagregar = new System.Windows.Forms.Button();
             this.rECETA_DETALLETableAdapter = new WindowsFormsApp2.RecetaDetalleTableAdapters.RECETA_DETALLETableAdapter();
+            this.btnQuitar = new System.Windows.Forms.Button();
+            this.rECETATableAdapter1 = new WindowsFormsApp2.RECETAPTableAdapters.RECETATableAdapter();
+            this.txtIdInsumo = new WindowsFormsApp2.Utilerias.Validacion();
+            this.txtcosto = new WindowsFormsApp2.Utilerias.Validacion();
+            this.txtcantidad = new WindowsFormsApp2.Utilerias.Validacion();
+            this.txtinsumo = new WindowsFormsApp2.Utilerias.Validacion();
+            this.txt_nombre = new WindowsFormsApp2.Utilerias.Validacion();
+            this.rECETATableAdapter2 = new WindowsFormsApp2.PRECETA1TableAdapters.RECETATableAdapter();
+            this.ridrecetaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rd_id_receta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rd_id_insumo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rd_cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rd_costo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.in_nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rnombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.rECETABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panesitoDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gRUPOBindingSource)).BeginInit();
@@ -73,6 +79,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.gruposDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eSTADOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rECETABindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pRECETA1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rECETABindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rECETAP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rECETADETALLEBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.recetaDetalle)).BeginInit();
             this.SuspendLayout();
@@ -119,52 +129,6 @@
             // 
             this.gRUPOTableAdapter.ClearBeforeFill = true;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(294, 19);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 13);
-            this.label4.TabIndex = 22;
-            this.label4.Text = "Status:";
-            // 
-            // cmbxstatus
-            // 
-            this.cmbxstatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbxstatus.FormattingEnabled = true;
-            this.cmbxstatus.Items.AddRange(new object[] {
-            "Activo",
-            "Cancelado"});
-            this.cmbxstatus.Location = new System.Drawing.Point(338, 16);
-            this.cmbxstatus.Margin = new System.Windows.Forms.Padding(2);
-            this.cmbxstatus.Name = "cmbxstatus";
-            this.cmbxstatus.Size = new System.Drawing.Size(92, 21);
-            this.cmbxstatus.TabIndex = 21;
-            // 
-            // cbxgrupo
-            // 
-            this.cbxgrupo.DataSource = this.gRUPOBindingSource;
-            this.cbxgrupo.DisplayMember = "g_descripcion";
-            this.cbxgrupo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxgrupo.FormattingEnabled = true;
-            this.cbxgrupo.Location = new System.Drawing.Point(338, 51);
-            this.cbxgrupo.Margin = new System.Windows.Forms.Padding(2);
-            this.cbxgrupo.Name = "cbxgrupo";
-            this.cbxgrupo.Size = new System.Drawing.Size(92, 21);
-            this.cbxgrupo.TabIndex = 20;
-            this.cbxgrupo.ValueMember = "g_id_grupo";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(294, 59);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 13);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "Grupo:";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -200,11 +164,14 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.rdidrecetaDataGridViewTextBoxColumn,
-            this.rdidinsumoDataGridViewTextBoxColumn,
-            this.rdcantidadDataGridViewTextBoxColumn,
-            this.rdcostoDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.rECETADETALLEBindingSource;
+            this.ridrecetaDataGridViewTextBoxColumn,
+            this.rd_id_receta,
+            this.rd_id_insumo,
+            this.rd_cantidad,
+            this.rd_costo,
+            this.in_nombre,
+            this.rnombreDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.rECETABindingSource2;
             this.dataGridView1.Location = new System.Drawing.Point(-2, 182);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
@@ -214,33 +181,25 @@
             this.dataGridView1.TabIndex = 14;
             this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentDoubleClick);
             // 
-            // rdidrecetaDataGridViewTextBoxColumn
+            // rECETABindingSource2
             // 
-            this.rdidrecetaDataGridViewTextBoxColumn.DataPropertyName = "rd_id_receta";
-            this.rdidrecetaDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.rdidrecetaDataGridViewTextBoxColumn.Name = "rdidrecetaDataGridViewTextBoxColumn";
-            this.rdidrecetaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.rECETABindingSource2.DataMember = "RECETA";
+            this.rECETABindingSource2.DataSource = this.pRECETA1;
             // 
-            // rdidinsumoDataGridViewTextBoxColumn
+            // pRECETA1
             // 
-            this.rdidinsumoDataGridViewTextBoxColumn.DataPropertyName = "rd_id_insumo";
-            this.rdidinsumoDataGridViewTextBoxColumn.HeaderText = "ID INSUMO";
-            this.rdidinsumoDataGridViewTextBoxColumn.Name = "rdidinsumoDataGridViewTextBoxColumn";
-            this.rdidinsumoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pRECETA1.DataSetName = "PRECETA1";
+            this.pRECETA1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // rdcantidadDataGridViewTextBoxColumn
+            // rECETABindingSource1
             // 
-            this.rdcantidadDataGridViewTextBoxColumn.DataPropertyName = "rd_cantidad";
-            this.rdcantidadDataGridViewTextBoxColumn.HeaderText = "CANTIDAD";
-            this.rdcantidadDataGridViewTextBoxColumn.Name = "rdcantidadDataGridViewTextBoxColumn";
-            this.rdcantidadDataGridViewTextBoxColumn.ReadOnly = true;
+            this.rECETABindingSource1.DataMember = "RECETA";
+            this.rECETABindingSource1.DataSource = this.rECETAP;
             // 
-            // rdcostoDataGridViewTextBoxColumn
+            // rECETAP
             // 
-            this.rdcostoDataGridViewTextBoxColumn.DataPropertyName = "rd_costo";
-            this.rdcostoDataGridViewTextBoxColumn.HeaderText = "COSTO";
-            this.rdcostoDataGridViewTextBoxColumn.Name = "rdcostoDataGridViewTextBoxColumn";
-            this.rdcostoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.rECETAP.DataSetName = "RECETAP";
+            this.rECETAP.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // rECETADETALLEBindingSource
             // 
@@ -274,29 +233,6 @@
             this.btnnuevo.UseVisualStyleBackColor = true;
             this.btnnuevo.Click += new System.EventHandler(this.btnnuevo_Click);
             // 
-            // txt_nombre
-            // 
-            this.txt_nombre.Location = new System.Drawing.Point(86, 51);
-            this.txt_nombre.Name = "txt_nombre";
-            this.txt_nombre.Size = new System.Drawing.Size(144, 20);
-            this.txt_nombre.SoloLetras = false;
-            this.txt_nombre.SoloNumeros = false;
-            this.txt_nombre.TabIndex = 23;
-            this.txt_nombre.Validar = true;
-            this.txt_nombre.VRFC = false;
-            this.txt_nombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombre_KeyPress);
-            // 
-            // txtinsumo
-            // 
-            this.txtinsumo.Location = new System.Drawing.Point(71, 149);
-            this.txtinsumo.Name = "txtinsumo";
-            this.txtinsumo.Size = new System.Drawing.Size(117, 20);
-            this.txtinsumo.SoloLetras = false;
-            this.txtinsumo.SoloNumeros = false;
-            this.txtinsumo.TabIndex = 25;
-            this.txtinsumo.Validar = true;
-            this.txtinsumo.VRFC = false;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -307,17 +243,6 @@
             this.label5.TabIndex = 24;
             this.label5.Text = "Insumo:";
             // 
-            // txtcantidad
-            // 
-            this.txtcantidad.Location = new System.Drawing.Point(272, 149);
-            this.txtcantidad.Name = "txtcantidad";
-            this.txtcantidad.Size = new System.Drawing.Size(113, 20);
-            this.txtcantidad.SoloLetras = false;
-            this.txtcantidad.SoloNumeros = false;
-            this.txtcantidad.TabIndex = 27;
-            this.txtcantidad.Validar = true;
-            this.txtcantidad.VRFC = false;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -327,17 +252,6 @@
             this.label6.Size = new System.Drawing.Size(52, 13);
             this.label6.TabIndex = 26;
             this.label6.Text = "Cantidad:";
-            // 
-            // txtcosto
-            // 
-            this.txtcosto.Location = new System.Drawing.Point(272, 113);
-            this.txtcosto.Name = "txtcosto";
-            this.txtcosto.Size = new System.Drawing.Size(113, 20);
-            this.txtcosto.SoloLetras = false;
-            this.txtcosto.SoloNumeros = false;
-            this.txtcosto.TabIndex = 29;
-            this.txtcosto.Validar = true;
-            this.txtcosto.VRFC = false;
             // 
             // label7
             // 
@@ -351,7 +265,7 @@
             // 
             // btnBInsumo
             // 
-            this.btnBInsumo.Location = new System.Drawing.Point(421, 98);
+            this.btnBInsumo.Location = new System.Drawing.Point(421, 54);
             this.btnBInsumo.Margin = new System.Windows.Forms.Padding(2);
             this.btnBInsumo.Name = "btnBInsumo";
             this.btnBInsumo.Size = new System.Drawing.Size(89, 41);
@@ -359,17 +273,6 @@
             this.btnBInsumo.Text = "BUSCAR INSUMO";
             this.btnBInsumo.UseVisualStyleBackColor = true;
             this.btnBInsumo.Click += new System.EventHandler(this.btnBInsumo_Click);
-            // 
-            // txtIdInsumo
-            // 
-            this.txtIdInsumo.Location = new System.Drawing.Point(71, 109);
-            this.txtIdInsumo.Name = "txtIdInsumo";
-            this.txtIdInsumo.Size = new System.Drawing.Size(117, 20);
-            this.txtIdInsumo.SoloLetras = false;
-            this.txtIdInsumo.SoloNumeros = false;
-            this.txtIdInsumo.TabIndex = 32;
-            this.txtIdInsumo.Validar = true;
-            this.txtIdInsumo.VRFC = false;
             // 
             // label8
             // 
@@ -383,7 +286,7 @@
             // 
             // btnagregar
             // 
-            this.btnagregar.Location = new System.Drawing.Point(421, 145);
+            this.btnagregar.Location = new System.Drawing.Point(421, 106);
             this.btnagregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Size = new System.Drawing.Size(89, 27);
@@ -396,11 +299,136 @@
             // 
             this.rECETA_DETALLETableAdapter.ClearBeforeFill = true;
             // 
+            // btnQuitar
+            // 
+            this.btnQuitar.Location = new System.Drawing.Point(421, 142);
+            this.btnQuitar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnQuitar.Name = "btnQuitar";
+            this.btnQuitar.Size = new System.Drawing.Size(89, 27);
+            this.btnQuitar.TabIndex = 34;
+            this.btnQuitar.Text = "QUITAR";
+            this.btnQuitar.UseVisualStyleBackColor = true;
+            this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
+            // 
+            // rECETATableAdapter1
+            // 
+            this.rECETATableAdapter1.ClearBeforeFill = true;
+            // 
+            // txtIdInsumo
+            // 
+            this.txtIdInsumo.Location = new System.Drawing.Point(71, 109);
+            this.txtIdInsumo.Name = "txtIdInsumo";
+            this.txtIdInsumo.Size = new System.Drawing.Size(117, 20);
+            this.txtIdInsumo.SoloLetras = false;
+            this.txtIdInsumo.SoloNumeros = false;
+            this.txtIdInsumo.TabIndex = 32;
+            this.txtIdInsumo.Validar = true;
+            this.txtIdInsumo.VRFC = false;
+            // 
+            // txtcosto
+            // 
+            this.txtcosto.Location = new System.Drawing.Point(272, 113);
+            this.txtcosto.Name = "txtcosto";
+            this.txtcosto.Size = new System.Drawing.Size(113, 20);
+            this.txtcosto.SoloLetras = false;
+            this.txtcosto.SoloNumeros = false;
+            this.txtcosto.TabIndex = 29;
+            this.txtcosto.Validar = true;
+            this.txtcosto.VRFC = false;
+            // 
+            // txtcantidad
+            // 
+            this.txtcantidad.Location = new System.Drawing.Point(272, 149);
+            this.txtcantidad.Name = "txtcantidad";
+            this.txtcantidad.Size = new System.Drawing.Size(113, 20);
+            this.txtcantidad.SoloLetras = false;
+            this.txtcantidad.SoloNumeros = false;
+            this.txtcantidad.TabIndex = 27;
+            this.txtcantidad.Validar = true;
+            this.txtcantidad.VRFC = false;
+            // 
+            // txtinsumo
+            // 
+            this.txtinsumo.Location = new System.Drawing.Point(71, 149);
+            this.txtinsumo.Name = "txtinsumo";
+            this.txtinsumo.Size = new System.Drawing.Size(117, 20);
+            this.txtinsumo.SoloLetras = false;
+            this.txtinsumo.SoloNumeros = false;
+            this.txtinsumo.TabIndex = 25;
+            this.txtinsumo.Validar = true;
+            this.txtinsumo.VRFC = false;
+            // 
+            // txt_nombre
+            // 
+            this.txt_nombre.Location = new System.Drawing.Point(86, 51);
+            this.txt_nombre.Name = "txt_nombre";
+            this.txt_nombre.Size = new System.Drawing.Size(144, 20);
+            this.txt_nombre.SoloLetras = false;
+            this.txt_nombre.SoloNumeros = false;
+            this.txt_nombre.TabIndex = 23;
+            this.txt_nombre.Validar = true;
+            this.txt_nombre.VRFC = false;
+            this.txt_nombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombre_KeyPress);
+            // 
+            // rECETATableAdapter2
+            // 
+            this.rECETATableAdapter2.ClearBeforeFill = true;
+            // 
+            // ridrecetaDataGridViewTextBoxColumn
+            // 
+            this.ridrecetaDataGridViewTextBoxColumn.DataPropertyName = "r_id_receta";
+            this.ridrecetaDataGridViewTextBoxColumn.HeaderText = "r_id_receta";
+            this.ridrecetaDataGridViewTextBoxColumn.Name = "ridrecetaDataGridViewTextBoxColumn";
+            this.ridrecetaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rd_id_receta
+            // 
+            this.rd_id_receta.DataPropertyName = "rd_id_receta";
+            this.rd_id_receta.HeaderText = "rd_id_receta";
+            this.rd_id_receta.Name = "rd_id_receta";
+            this.rd_id_receta.ReadOnly = true;
+            // 
+            // rd_id_insumo
+            // 
+            this.rd_id_insumo.DataPropertyName = "rd_id_insumo";
+            this.rd_id_insumo.HeaderText = "rd_id_insumo";
+            this.rd_id_insumo.Name = "rd_id_insumo";
+            this.rd_id_insumo.ReadOnly = true;
+            // 
+            // rd_cantidad
+            // 
+            this.rd_cantidad.DataPropertyName = "rd_cantidad";
+            this.rd_cantidad.HeaderText = "rd_cantidad";
+            this.rd_cantidad.Name = "rd_cantidad";
+            this.rd_cantidad.ReadOnly = true;
+            // 
+            // rd_costo
+            // 
+            this.rd_costo.DataPropertyName = "rd_costo";
+            this.rd_costo.HeaderText = "rd_costo";
+            this.rd_costo.Name = "rd_costo";
+            this.rd_costo.ReadOnly = true;
+            // 
+            // in_nombre
+            // 
+            this.in_nombre.DataPropertyName = "in_nombre";
+            this.in_nombre.HeaderText = "in_nombre";
+            this.in_nombre.Name = "in_nombre";
+            this.in_nombre.ReadOnly = true;
+            // 
+            // rnombreDataGridViewTextBoxColumn
+            // 
+            this.rnombreDataGridViewTextBoxColumn.DataPropertyName = "r_nombre";
+            this.rnombreDataGridViewTextBoxColumn.HeaderText = "r_nombre";
+            this.rnombreDataGridViewTextBoxColumn.Name = "rnombreDataGridViewTextBoxColumn";
+            this.rnombreDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // frmreceta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(741, 398);
+            this.Controls.Add(this.btnQuitar);
             this.Controls.Add(this.btnagregar);
             this.Controls.Add(this.txtIdInsumo);
             this.Controls.Add(this.label8);
@@ -412,10 +440,6 @@
             this.Controls.Add(this.txtinsumo);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txt_nombre);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.cmbxstatus);
-            this.Controls.Add(this.cbxgrupo);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtid_receta);
@@ -433,6 +457,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.gruposDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eSTADOBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rECETABindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pRECETA1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rECETABindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rECETAP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rECETADETALLEBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.recetaDetalle)).EndInit();
             this.ResumeLayout(false);
@@ -450,10 +478,6 @@
         private gruposDataSet2 gruposDataSet2;
         private System.Windows.Forms.BindingSource gRUPOBindingSource;
         private gruposDataSet2TableAdapters.GRUPOTableAdapter gRUPOTableAdapter;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cmbxstatus;
-        private System.Windows.Forms.ComboBox cbxgrupo;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtid_receta;
@@ -474,9 +498,19 @@
         private RecetaDetalle recetaDetalle;
         private System.Windows.Forms.BindingSource rECETADETALLEBindingSource;
         private RecetaDetalleTableAdapters.RECETA_DETALLETableAdapter rECETA_DETALLETableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rdidrecetaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rdidinsumoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rdcantidadDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rdcostoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnQuitar;
+        private RECETAP rECETAP;
+        private System.Windows.Forms.BindingSource rECETABindingSource1;
+        private RECETAPTableAdapters.RECETATableAdapter rECETATableAdapter1;
+        private PRECETA1 pRECETA1;
+        private System.Windows.Forms.BindingSource rECETABindingSource2;
+        private PRECETA1TableAdapters.RECETATableAdapter rECETATableAdapter2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ridrecetaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rd_id_receta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rd_id_insumo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rd_cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rd_costo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn in_nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rnombreDataGridViewTextBoxColumn;
     }
 }

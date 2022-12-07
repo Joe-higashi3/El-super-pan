@@ -355,12 +355,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Pedidos.xsd</DependentUpon>
     </Compile>
+    <Compile Include="PRECETA1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PRECETA1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RecetaDetalle.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RecetaDetalle.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RECETAP.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RECETAP.xsd</DependentUpon>
     </Compile>
     <Compile Include="reportes\frmrepopedidos.cs">
       <SubType>Form</SubType>
@@ -845,6 +855,17 @@
     <None Include="Pedidos.xss">
       <DependentUpon>Pedidos.xsd</DependentUpon>
     </None>
+    <None Include="PRECETA1.xsc">
+      <DependentUpon>PRECETA1.xsd</DependentUpon>
+    </None>
+    <None Include="PRECETA1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PRECETA1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PRECETA1.xss">
+      <DependentUpon>PRECETA1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -864,6 +885,17 @@
     </None>
     <None Include="RecetaDetalle.xss">
       <DependentUpon>RecetaDetalle.xsd</DependentUpon>
+    </None>
+    <None Include="RECETAP.xsc">
+      <DependentUpon>RECETAP.xsd</DependentUpon>
+    </None>
+    <None Include="RECETAP.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RECETAP.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RECETAP.xss">
+      <DependentUpon>RECETAP.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

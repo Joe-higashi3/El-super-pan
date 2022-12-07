@@ -29,7 +29,7 @@ namespace WindowsFormsApp2.busquedas
 
         private void txtinsumo_TextChanged(object sender, EventArgs e)
         {
-            
+            this.iNSUMOTableAdapter.Fill(this.buscarInsumo.INSUMO, txtinsumo.Text);
         }
     }
 }

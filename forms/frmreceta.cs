@@ -26,18 +26,20 @@ namespace WindowsFormsApp2.forms
 
         private void frmreceta_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'pRECETA1.RECETA' Puede moverla o quitarla según sea necesario.
+            this.rECETATableAdapter2.Fill(this.pRECETA1.RECETA);
+            // TODO: esta línea de código carga datos en la tabla 'rECETAP.RECETA' Puede moverla o quitarla según sea necesario.
+            //this.rECETATableAdapter1.Fill(this.rECETAP.RECETA);
             // TODO: esta línea de código carga datos en la tabla 'recetaDetalle.RECETA_DETALLE' Puede moverla o quitarla según sea necesario.
-            this.rECETA_DETALLETableAdapter.Fill(this.recetaDetalle.RECETA_DETALLE);
+            // this.rECETA_DETALLETableAdapter.Fill(this.recetaDetalle.RECETA_DETALLE);
             // TODO: esta línea de código carga datos en la tabla 'gruposDataSet2.GRUPO' Puede moverla o quitarla según sea necesario.
             //this.gRUPOTableAdapter.Fill(this.gruposDataSet2.GRUPO);
             // TODO: esta línea de código carga datos en la tabla 'gruposDataSet.ESTADO' Puede moverla o quitarla según sea necesario.
             // this.eSTADOTableAdapter.Fill(this.gruposDataSet.ESTADO);
             // TODO: esta línea de código carga datos en la tabla 'panesitoDataSet3.RECETA' Puede moverla o quitarla según sea necesario.
             //this.rECETATableAdapter.Fill(this.panesitoDataSet3.RECETA);
-
             txt_nombre.Focus();
             consecutivo();
-            cmbxstatus.SelectedIndex = 0;
 
         }
 
@@ -46,9 +48,6 @@ namespace WindowsFormsApp2.forms
             clsreceta receta = new clsreceta();
             receta.iIdreceta = Convert.ToInt32(txtid_receta.Text);
             receta.sNombre = txt_nombre.Text;
-            //receta.fCosto = float.Parse(txtcosto.Text);
-            receta.iIdInsumo = Convert.ToInt32(txtIdInsumo.Text);
-            receta.sStatus = cmbxstatus.Text.Substring(0, 1);
 
             if (receta.GuardarReceta() == true)
             {
@@ -58,6 +57,48 @@ namespace WindowsFormsApp2.forms
             else
             {
                 MessageBox.Show("ERROR: Los datos no se pudieron guardar: " + receta.error);
+
+            }
+        }
+
+        private void AgregarInsumo()
+        {
+            clsreceta receta = new clsreceta();
+            receta.iIdreceta = Convert.ToInt32(txtid_receta.Text);
+            receta.iIdInsumo = Convert.ToInt32(txtIdInsumo.Text);
+            receta.fCantidad = float.Parse(txtcantidad.Text);
+            receta.fCosto = float.Parse(txtcosto.Text);
+
+            if (receta.GuardarReceta() == true)
+            {
+                txtinsumo.Clear();
+                txtcantidad.Clear();
+                txtcosto.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Hubo un problema con al eliminar el producto error: " + receta.error2);
+
+            }
+        }
+
+        private void QuitarInsumo()
+        {
+            clsreceta receta = new clsreceta();
+            receta.iIdreceta = Convert.ToInt32(txtid_receta.Text);
+            receta.iIdInsumo = Convert.ToInt32(txtIdInsumo.Text);
+            receta.fCantidad = float.Parse(txtcantidad.Text);
+            receta.fCosto = float.Parse(txtcosto.Text);
+
+            if (receta.GuardarReceta() == true)
+            {
+                txtinsumo.Clear();
+                txtcantidad.Clear();
+                txtcosto.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Hubo un problema con al eliminar el producto error: " + receta.error3);
 
             }
         }
@@ -86,10 +127,8 @@ namespace WindowsFormsApp2.forms
         private void limpiar()
         {
             txt_nombre.Clear();
-            //txtcosto.Clear();
             consecutivo();
-            //this.iNSUMOTableAdapter2.Fill(this.panesitoInsumo.INSUMO);
-            //this.uNIDADTableAdapter2.Fill(this.panesitoUnidad.UNIDAD);
+            //this.rECETATableAdapter1.Fill(this.rECETAP.RECETA);
             txt_nombre.Focus();
         }
 
@@ -106,7 +145,7 @@ namespace WindowsFormsApp2.forms
 
         private void txt_nombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            ValidarLetras(sender, e);
+            //ValidarLetras(sender, e);
             txt_nombre.Focus();
         }
 
@@ -118,36 +157,24 @@ namespace WindowsFormsApp2.forms
 
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtid_receta.Text = this.recetaDetalle.RECETA_DETALLE[rECETADETALLEBindingSource.Position].rd_id_receta.ToString();
-            txtIdInsumo.Text = this.recetaDetalle.RECETA_DETALLE[rECETADETALLEBindingSource.Position].rd_id_insumo.ToString();
-            //txtinsumo.Text = this.recetaDetalle.RECETA_DETALLE[rECETADETALLEBindingSource.Position].rd_insumo.ToString();
-            txtcosto.Text = this.recetaDetalle.RECETA_DETALLE[rECETADETALLEBindingSource.Position].rd_costo.ToString();
+            txtid_receta.Text = this.pRECETA1.RECETA[rECETABindingSource2.Position].r_id_receta.ToString();
+            txt_nombre.Text = this.pRECETA1.RECETA[rECETABindingSource2.Position].r_nombre.ToString();
+            txtid_receta.Text = this.pRECETA1.RECETA[rECETABindingSource2.Position].rd_id_receta.ToString();
+            txtIdInsumo.Text = this.pRECETA1.RECETA[rECETABindingSource2.Position].rd_id_insumo.ToString();
+            txtinsumo.Text = this.pRECETA1.RECETA[rECETABindingSource2.Position].in_nombre.ToString();
+            txtcantidad.Text = this.pRECETA1.RECETA[rECETABindingSource2.Position].rd_cantidad.ToString();
+            txtcosto.Text = this.pRECETA1.RECETA[rECETABindingSource2.Position].rd_costo.ToString();
         }
 
-        private bool ValidarNumeros(object sender, KeyPressEventArgs e)
-        {
-            if ((e.KeyChar >= 32 && e.KeyChar <= 45) || (e.KeyChar >= 58 && e.KeyChar <= 255))
-            {
-                MessageBox.Show("¡Ingrese Solo Numeros!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                e.Handled = true;
-            }
-            return e.Handled;
-        }
-
-        private bool ValidarLetras(object sender, KeyPressEventArgs e)
-        {
-            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
-            {
-                //errorNombre.SetError(txtnombre, "Ingrese solo Letras");
-                MessageBox.Show("¡Ingrese Solo Letras!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                e.Handled = true;
-            }
-            return e.Handled;
-        }
 
         private void btnagregar_Click(object sender, EventArgs e)
         {
+            AgregarInsumo();
+        }
 
+        private void btnQuitar_Click(object sender, EventArgs e)
+        {
+            QuitarInsumo();
         }
     }
 }

@@ -15,6 +15,14 @@ mu_descripcion varchar (100) not null,
 mu_id_estado int not null foreign key references estado(es_id_estado)
 )
 
+--Nueva (Mayoreo/Menudeo)
+create table TIPO_CLIENTE
+(
+tc_id int primary key,
+tc_descripcion varchar(100)
+)
+
+--Modificada
 create table CLIENTE
 (
 cl_id_cliente int primary key,
@@ -27,6 +35,7 @@ cl_num_interior varchar (10) not null,
 cl_num_exterior varchar (10) null,
 cl_colonia varchar (50) not null,
 cl_id_municipio int not null foreign key references municipio(mu_id_municipio),
+cl_id_tipocl int not null foreign key references TIPO_CLIENTE(tc_id),
 cl_status char(1) not null
 )
 
@@ -61,6 +70,7 @@ Create table PEDIDO
 	pe_estatus_pedido bit not null
 )
 
+--SE CANCELA
 create table PEDIDO_DETALLE_TEMPORAL
 (
 	pdt_id_pedido int not null foreign key references PEDIDO(pe_id_pedido),
@@ -124,34 +134,39 @@ CREATE TABLE RECETA
 CREATE TABLE RECETA_DETALLE
 (
 	rd_id_receta int not null foreign key references RECETA(r_id_receta),
-	rd_id_insumo  int not null foreign key references INSUMO(in_id_insumo),
+	rd_id_insumo int not null foreign key references INSUMO(in_id_insumo),
 	rd_cantidad int not null,
 	rd_costo float not null
 )
 
-
+--MODIFICADA
 CREATE TABLE VENTA
 (
 	vta_id_venta int primary key,
 	vta_id_empleado int not null foreign key references EMPLEADO(em_id_empleado),
+	vta_id_cliente int not null foreign key references CLIENTE(cl_id_cliente),
+	--(Pedido o no: vta_tipo)
 	vta_tipo bit not null,
 	vta_fecha date not null,
 	vta_total float not null
 )
 
+--MODIFICADA
 CREATE TABLE DETALLE_VENTA_TEMPORAL
 (
 	dvt_id_venta int not null foreign key references VENTA(vta_id_venta),
-	dvt_id_pedido int not null foreign key references PEDIDO(pe_id_pedido),
+	dvt_id_cliente int not null foreign key references CLIENTE(cl_id_cliente),
+	--dvt_id_pedido int null foreign key references PEDIDO(pe_id_pedido),
 	dvt_id_producto int not null foreign key references PRODUCTO(pr_id_producto),
 	dvt_precio float not null,
 	dvt_cantidad int not null
 )
 
+--MODIFICADA
 CREATE TABLE DETALLE_VENTA
 (
 	dv_id_venta int not null foreign key references VENTA(vta_id_venta),
-	dv_id_pedido int not null foreign key references PEDIDO(pe_id_pedido),
+	dv_id_pedido int null foreign key references PEDIDO(pe_id_pedido),
 	dv_id_producto int not null foreign key references PRODUCTO(pr_id_producto),
 	dv_precio float not null,
 	dv_cantidad int not null
@@ -217,3 +232,7 @@ CREATE TABLE MOV_INV_DET
 )
 
 
+/*
+	RECETA
+	INVENTARIO
+*/

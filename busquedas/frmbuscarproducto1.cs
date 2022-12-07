@@ -21,6 +21,7 @@ namespace WindowsFormsApp2.forms
         {
             // TODO: esta línea de código carga datos en la tabla 'buscarproducto.PRODUCTO' Puede moverla o quitarla según sea necesario.
             this.pRODUCTOTableAdapter.Fill(this.buscarproducto.PRODUCTO,TXTNOMBRE.Text);
+    
 
         }
 
